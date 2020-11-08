@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from rank.py import GetRank
+from terms.py import GetTerms
 from tabel.py import GetTabel	
 app = Flask(__name__)
 
