@@ -1,8 +1,9 @@
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
 from tabel import KataDalamDokumen, firstsentence, KamusDokumen, KataDalamKamus, kamusDokumen, kataDiDokumen, kalimatPertama
+import collections
 
-query = {'big': 2, 'car': 1}
+query = {'equip': 2, 'ethic': 1}
 testdata = kamusDokumen
 
 def GetRank(query, testdata):
@@ -17,6 +18,10 @@ def GetRank(query, testdata):
 
 	# semua kata di lower case dan dibuat list kata2 unik secara berurutan
 
+	newdict = dict([((s,i),value) for (i,s),value in testdata.items()])
+	new = collections.OrderedDict(sorted(newdict.items()))
+	final = dict([((s,i),value) for (i,s),value in new.items()])
+
 	queryvector = []
 	docvector = []
 	simvector = []
@@ -29,6 +34,7 @@ def GetRank(query, testdata):
 	prec = 0
 	magqueryvector = 0
 	iter = 0
+	banyakdokumen = 100
 
 	for i in query.values():
 		queryvector.append(i)
@@ -39,17 +45,17 @@ def GetRank(query, testdata):
 
 	iter = len(queryvector)
 
-	for s,i in testdata:
+	for s,i in final:
 		for k in query:
 			if s == k:
-				docvector.append(testdata[(s,i)])
+				docvector.append(final[(s,i)])
 				count += 1
 				if count == iter:
 					for j in range(iter):
 						dotproduct += queryvector[j] * docvector[j]
 					count = 0
 		if (i == prec):
-			magdocvector += testdata[(s,i)] ** 2
+			magdocvector += final[(s,i)] ** 2
 		else:
 			magdocvector = magdocvector ** 0.5
 			sim = dotproduct/(magqueryvector * magdocvector)
@@ -67,8 +73,9 @@ def GetRank(query, testdata):
 	arrfirstsentence = kalimatPertama
 
 	for i in range(prec):
-		print(len(nkata[i]))
 		arroftupleresult.append((('hasil'+str(i+1)+'.txt'),len(nkata[i]),simvector[i],arrfirstsentence[i]))
+	
+	arroftupleresult.sort(key=lambda tup: tup[2], reverse = True)
 	print(arroftupleresult)
 
 GetRank(query, testdata)

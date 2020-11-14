@@ -152,6 +152,3 @@ kamusKata = KataDalamKamus(2)
 kataDiDokumen = KataDalamDokumen(2)
 kalimatPertama = firstsentence(2)
 kamusDokumen = KamusDokumen(2, kamusKata, kataDiDokumen)
-
-for i in range(2):
-    print(kataDiDokumen[i])
