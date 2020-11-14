@@ -1,10 +1,9 @@
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
-import tabel
+from tabel import KataDalamDokumen, firstsentence, KamusDokumen, KataDalamKamus, kamusDokumen, kataDiDokumen, kalimatPertama
 
 query = {'big': 2, 'car': 1}
-testdata = {('ant', 0): 7, ('big', 0): 2, ('car', 0): 1, ('ship', 0): 5, 
-			('ant', 1): 5, ('big', 1): 9, ('car', 1): 7, ('ship', 1): 3}
+testdata = kamusDokumen
 
 def GetRank(query, testdata):
 	# GetRank(query) menerima dictionary dengan 
@@ -41,7 +40,6 @@ def GetRank(query, testdata):
 	iter = len(queryvector)
 
 	for s,i in testdata:
-		print(s,i)
 		for k in query:
 			if s == k:
 				docvector.append(testdata[(s,i)])
@@ -63,11 +61,15 @@ def GetRank(query, testdata):
 	magdocvector = magdocvector ** 0.5
 	sim = dotproduct/(magqueryvector * magdocvector)
 	simvector.append(sim)		
+	prec += 1
 
-	print(simvector)
+	nkata = kataDiDokumen
+	arrfirstsentence = kalimatPertama
 
-  	for i in range(prec):
-		arroftupleresult.append((('hasil'+str(i+1)+'.txt'),len(KataDalamDokumen),simvector[i],firstsentence('hasil'+str(i+1))))
+	for i in range(prec):
+		print(len(nkata[i]))
+		arroftupleresult.append((('hasil'+str(i+1)+'.txt'),len(nkata[i]),simvector[i],arrfirstsentence[i]))
+	print(arroftupleresult)
 
 GetRank(query, testdata)
 

@@ -8,7 +8,6 @@ from nltk.stem import PorterStemmer
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
 
-
 #Fungsi Utama
 def GetTabel(banyakDokumen, kamusKata, kataDiDokumen):
 	return KamusDokumen(banyakDokumen, kamusKata, kataDiDokumen)
@@ -103,10 +102,13 @@ def StopWordsRemove(arrayOfKata):
     return arrayKataTanpaStopWords
 
 #Mengambil kalimat pertama
-def firstsentence(namaFile):
-  konten = BacaKontenTxt(namaFile)
-  sentences = sent_tokenize(konten)
-  return sentences[0]
+def firstsentence(banyakDokumen):
+  arroffirstsentence = []
+  for i in range(banyakDokumen):
+    konten = BacaKontenTxt("hasil"+str(i+1))
+    sentences = sent_tokenize(konten)
+    arroffirstsentence.append(sentences[0])
+  return arroffirstsentence
 
 #Fungsi yang menggabungkan fungsi-fungsi sebelumnya. Menerima parameter berupa namafile dan akan mengembalikan array of kata yang sudah bersih (sudah stem, remove stopwords)
 def ArrayIsiFileSiapOlah(namaFile):
@@ -148,7 +150,8 @@ for url in arrurl:
 
 kamusKata = KataDalamKamus(2)
 kataDiDokumen = KataDalamDokumen(2)
-for i in kataDiDokumen:
-  print(len(i))
+kalimatPertama = firstsentence(2)
 kamusDokumen = KamusDokumen(2, kamusKata, kataDiDokumen)
-print(kamusDokumen)
+
+for i in range(2):
+    print(kataDiDokumen[i])
