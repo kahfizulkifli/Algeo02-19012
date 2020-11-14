@@ -20,9 +20,10 @@ def GetTabel(banyakDokumen, kamusKata, kataDiDokumen):
 #-------Dummy--------------
 #2 (dua) variabel di bawah ini, digunakan sebagai dummy url untuk melakukan web scrapping
 
-#url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
-#url1 = 'https://www.fox13now.com/news/coronavirus/local-coronavirus-news/utah-considers-thanksgiving-covid-19-recommendations-medical-experts-say-dont-gather'
+url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
+url1 = 'https://www.fox13now.com/news/coronavirus/local-coronavirus-news/utah-considers-thanksgiving-covid-19-recommendations-medical-experts-say-dont-gather'
 
+arrurl = [url, url1]
 ############################
 
 #-------Fungsi Mainan-------
@@ -101,6 +102,12 @@ def StopWordsRemove(arrayOfKata):
             arrayKataTanpaStopWords.append(kata)
     return arrayKataTanpaStopWords
 
+#Mengambil kalimat pertama
+def firstsentence(namaFile):
+  konten = BacaKontenTxt(namaFile)
+  sentences = sent_tokenize(konten)
+  return sentences[0]
+
 #Fungsi yang menggabungkan fungsi-fungsi sebelumnya. Menerima parameter berupa namafile dan akan mengembalikan array of kata yang sudah bersih (sudah stem, remove stopwords)
 def ArrayIsiFileSiapOlah(namaFile):
     stringDariFile = BacaKontenTxt(namaFile)
@@ -134,34 +141,14 @@ def KamusDokumen(banyakDokumen, kamusKata, kataDiDokumen):
     return kamusKataDokumen
 
 #Testing
-"""kamusKata = KataDalamKamus(2)
+i = 0
+for url in arrurl:
+  SaveKontenTxt("hasil"+str(i+1),WebScrappingKontenByUrl(url))
+  i += 1
+
+kamusKata = KataDalamKamus(2)
 kataDiDokumen = KataDalamDokumen(2)
+for i in kataDiDokumen:
+  print(len(i))
 kamusDokumen = KamusDokumen(2, kamusKata, kataDiDokumen)
-print(kamusDokumen)"""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(kamusDokumen)

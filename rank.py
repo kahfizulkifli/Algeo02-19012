@@ -1,5 +1,6 @@
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
+import tabel
 
 query = {'big': 2, 'car': 1}
 testdata = {('ant', 0): 7, ('big', 0): 2, ('car', 0): 1, ('ship', 0): 5, 
@@ -18,11 +19,20 @@ def GetRank(query, testdata):
 	# semua kata di lower case dan dibuat list kata2 unik secara berurutan
 
 	queryvector = []
+	docvector = []
+	simvector = []
+	arroftupleresult = []
+
+	count = 0
+	dotproduct = 0
+	magdocvector = 0
+	sim = 0
+	prec = 0
+	magqueryvector = 0
+	iter = 0
 
 	for i in query.values():
 		queryvector.append(i)
-
-	magqueryvector = 0
 
 	for i in queryvector:
 		magqueryvector += i ** 2
@@ -30,30 +40,34 @@ def GetRank(query, testdata):
 
 	iter = len(queryvector)
 
-	docvector = []
-
-	count = 0
-	dotproduct = 0
-	magdocvector = 0
-	sim = 0
-
-	prec = 0
-
 	for s,i in testdata:
+		print(s,i)
 		for k in query:
 			if s == k:
 				docvector.append(testdata[(s,i)])
 				count += 1
 				if count == iter:
-					for i in range(iter):
-						dotproduct += queryvector[i] * docvector[i]
+					for j in range(iter):
+						dotproduct += queryvector[j] * docvector[j]
+					count = 0
 		if (i == prec):
 			magdocvector += testdata[(s,i)] ** 2
 		else:
 			magdocvector = magdocvector ** 0.5
 			sim = dotproduct/(magqueryvector * magdocvector)
+			simvector.append(sim)
+			dotproduct = 0
+			sim = 0
+			docvector.clear()
+			prec += 1
+	magdocvector = magdocvector ** 0.5
+	sim = dotproduct/(magqueryvector * magdocvector)
+	simvector.append(sim)		
 
+	print(simvector)
 
+  	for i in range(prec):
+		arroftupleresult.append((('hasil'+str(i+1)+'.txt'),len(KataDalamDokumen),simvector[i],firstsentence('hasil'+str(i+1))))
 
 GetRank(query, testdata)
 
