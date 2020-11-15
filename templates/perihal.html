@@ -1,1 +1,13 @@
 <!DOCTYPE html>
+
+<!-- judul laman -->
+{% block title %}
+	<h1>Ini halaman perihal</h1>
+{% endblock %}
+
+<!-- isi laman perihal -->
+{% block content %}
+	<li>
+		<a href="{{ homepage }}">kembali</a>
+	</li>
+{% endblock %}

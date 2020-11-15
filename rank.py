@@ -1,12 +1,11 @@
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
-from tabel import KataDalamDokumen, firstsentence, KamusDokumen, KataDalamKamus, kamusDokumen, kataDiDokumen, kalimatPertama
+from terms import *
 import collections
 
 query = {'equip': 2, 'ethic': 1}
-testdata = kamusDokumen
 
-def GetRank(query, testdata):
+def GetRank(query):
 	# GetRank(query) menerima dictionary dengan 
 	# keys bentuk (string query, dokumen ke-i)
 	# value berisi jumlah kemunculan 
@@ -18,7 +17,13 @@ def GetRank(query, testdata):
 
 	# semua kata di lower case dan dibuat list kata2 unik secara berurutan
 
-	newdict = dict([((s,i),value) for (i,s),value in testdata.items()])
+	# dicopas oleh Wibi dari tabel.py
+	kamusKata = KataDalamKamus(BANYAK_DOKUMEN)
+	kataDiDokumen = KataDalamDokumen(BANYAK_DOKUMEN)
+	kalimatPertama = firstsentence(BANYAK_DOKUMEN)
+	kamusDokumen = KamusDokumen(BANYAK_DOKUMEN, kamusKata, kataDiDokumen)
+
+	newdict = dict([((s,i),value) for (i,s),value in kamusDokumen.items()])
 	new = collections.OrderedDict(sorted(newdict.items()))
 	final = dict([((s,i),value) for (i,s),value in new.items()])
 
@@ -38,7 +43,6 @@ def GetRank(query, testdata):
 
 	for i in query.values():
 		queryvector.append(i)
-
 	for i in queryvector:
 		magqueryvector += i ** 2
 	magqueryvector = magqueryvector ** 0.5
@@ -76,9 +80,10 @@ def GetRank(query, testdata):
 		arroftupleresult.append((('hasil'+str(i+1)+'.txt'),len(nkata[i]),simvector[i],arrfirstsentence[i]))
 	
 	arroftupleresult.sort(key=lambda tup: tup[2], reverse = True)
-	print(arroftupleresult)
+	return arroftupleresult
+	# print(arroftupleresult)
 
-GetRank(query, testdata)
+#GetRank(query, testdata)
 
 	# Misal query = 'big big car'
 

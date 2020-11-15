@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-   <head>
-   	Search Engine yey
-   </head>
-   <body>
-   	<form method="post">
-   		<label for="query">Query</label>
-   		<input name="query" id="query">
-   		<input type="submit">
-   	</form>
-   	<li><a href="{{url_for('perihal')}}">Perihal</a></li>
-   </body>
-</html>
+
+<!-- judul laaman --> 
+{% block title %}
+	<h1>My Simple Search Engine</h1>
+{% endblock %}
+
+<!-- isi laman -->
+{% block content %}
+	<!-- form upload dokumen -->
+	<form method="post" enctype="multipart/form-data">
+		<label for="upload">Upload dokumen (.txt):</label>
+		<input type="file" name="upload" accept=".txt" required>
+		<input type="submit">
+	</form>
+	<!-- form query -->
+	<form method="post">
+		<input name="query" placeholder="Masukkan query">
+		<input type="submit">
+	</form>
+	<hr>
+   <br>
+   <!-- hyperlink ke laman perihal -->
+   <li>
+   	<a href="{{ perihalpage }}">Perihal</a>
+   </li>
+{% endblock %}

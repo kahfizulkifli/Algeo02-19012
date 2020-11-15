@@ -1,0 +1,2330 @@
+WEEK 1
+
+Rabu 26/08/2020
+	KWN 07.00
+		Ade Engkus Kusnadi S.Pd, M.Pd, prodi PKN di UPI, ngajar sejak 2016, megang 7 kelas semester ini, dosen studium generale juga
+		profil matkul:
+			di kampus lain matkul pancasila dipisah sama kewarganegaraan
+			di itb jadi satu matkul 2 sks
+			penilaian:
+				kehadiran 10%, harus hadir 80% pertemuan, 2/16
+				makalah kelompok 25%
+				UTS 30%, ujian tertulis, pertemuan ke-8, biasanya soal uraian analisis isu
+				UAS 35%, semester lalu ujian tertulis, semester ini tugas akhir berkelompok, dicicil dari awal kuliah
+			kelompok makalah ditentuin Pak Ade karena tahun lalu kalo bikin kelompok sendiri lama dan banyak politik :v
+			sengaja dicampur prodi
+			Q:
+				ada kuota PRS? prosedur pindah kelas gimana?
+			A:
+				saya sekarang tidak perlu ruang kelas, >80 pun gak masalah, saya sangat membuka
+				prosedur tadi dari TU sostek, kalo pindah kelas harus ada surat permintaan dari prodi, no. telp. sostek: 0222508145, tanyakan teknis ke sana
+			Q: 
+				(miss lol)
+			A:
+				perencanaan kuliah online udah lama, itb ngasih 2 alternatif: kuliah.itb.ac.id sama ms teams
+				dalam praktiknya itb memberikan keleluasaan ke dosen untuk milih
+				saya ngasih pengumuman di general
+				buat jaga-jaga pakai kuliah.itb.ac.id
+				di kuliah.itb kuotanya dibatesi
+			(banyak yang nanya seat-in tapi aku baca manga .-.)
+			A:
+				yang pindah kelas isi absen di kelas awal aja dulu, jangan lewat form biar nggak nyampur sama yang seat-in
+			bahan ajar ada di ms teams
+
+	Agama 09.00
+		ngaji Al-Mu'minun 1-11 bareng lol
+		Pak Agus Syihabudin
+		referensi:
+			cari Tafsir Al-Furqon, disusun Pak Hasan
+			Bulugul Maram, hadist-hadits terpilih Ibnu Hajar Ats-Qolani
+
+	(tidur)
+
+	Algeo 14.00
+		review matrix pake ppt & video 01
+		penting:
+			sifat-sifat operasi matriks, citsit di slide
+			inverse: AB=BA=I, harus persegi karena sama-sama I, kalo nggak persegi dimensinya beda
+			kata Hanif kalo hasil I AB dan BA beda dimensi, namanya pseudoinverse
+
+	TBFO 16.00
+		graf state: lingkaran double itu node end
+		* di regex berarti symbol sebelumnya bisa diulang berapa kalipun
+		[A-Z][a-z]*[][A-Z][A-Z] match Yogyakarta AB
+		epsilon itu string kosong
+		sigma* itu semua string termasuk string kosong
+		sigma+ itu semua string kecuali string kosong
+		(note: catetan yang gak ditulis ada di file allinone.pdf)
+
+		habis kelas mbahas pr di Discord ASYNC channel 10 3 jam-an, distory Suggoi :v
+
+Kamis 27/08/2020
+	Praktikum Alstrukdat 11.00-13.00
+		pake C :0
+		fullscore yey
+		keos, banyak yang ngerant
+		besok coba baca panduan check & compile
+
+	Matdis 15.00-16.00
+		nonton https://www.youtube.com/watch?v=CWslwZ_Of8w&feature=youtu.be dulu (video materi Himpunan 40 menit)
+		njir kukira mulainya 14.00
+		penting:
+			cara menyajikan himpunan
+				1. enumerasi ex. A={1,2,3,4,5,...}
+				2. simbol baku ex. N natural, R real, C complex, slit himpunan kosong
+				3. notasi pembentuk himpunan ex. {x|x>0}
+				4. diagram venn
+			dalam konteks himpunan, {1,1,1}={1}
+			A={3,3,3,9}, B={3,9}, A subset dari B
+			{} dan A improper subset dari A, selain itu proper subset
+			hati-hati sama simbol (subset sama dengan) sama (subset)
+			A=B kalo elemennya sama, A ~ B (ekivalen) kalo kardinalnya sama 
+			A//B -> A disjoint B
+			power set
+			operasi himpunan:
+				intersect
+				union
+				komplemen
+				difference -> A-B = A (union) (complement B)
+				symmetric difference (kayak xor, komutatif asosiatif juga)
+				cartesian product (ngepair semua elemen)
+					|A x B| = |A| x |B|
+					(a,b)!=(b,a)
+					A x B != B x A kecuali A kosong/B kosong
+			38:55, nomer 21 d) sketchy? (nah, solved)
+		meet bareng Bu Ulfa
+		ada cek afk nya :0
+		disuruh belajar sendiri 15.15
+
+		balik lagi 15.40
+		diskusi 4 soal
+
+	Alstrukdat 16.00-18.00
+		nonton youtube, dapet link dari stei.kuliah.itb
+		videonya 5
+		gak kucatet, banyak tulisan :v
+		meeting ms teams 16.50
+		operasi primitif itu ngoperasiin unit terkecil, algonya bergantung struktur data
+		operasi pendukung/komposit itu ngoperasiin unit nggak terkecil :v, algonya nggak bergantung struktur data, datanya udah diolahin primitif ex. timedifference pake gethour dkk.
+		pertemuan selanjutnya ganti meet
+
+Jumat 28/08/2020
+	Orkom 15.00-17.00
+		nonton video dulu (maunya, tapi corrupt beberapa kali, cuma nonton 3/10 menit :v)
+		oya video sama slidenya ada di ms teams, judulnya tur sistem komputer
+		15.30 mulai sinkron
+		materinya tur sistem komputer
+		pusing
+		sampe slide hirarki memori, wah menarik
+		overall materinya menarik sih, kayak dongeng
+		pertanyaannya bagus-bagus nyesel nggak nyatet :(
+		Q Asadel:
+			kenapa butuh banyak level cache SRAM, nggak satu aja?
+		A:
+			dulu tahun 80an cuma satu, terus levelnya ditambah biar ada cache yang cepet tapi memorinya kecil (L1) dan ada cache yang lebih lambat tapi gede (L2-L3)
+		insights:
+			CPU 3 GHz njalanin 1 cycle 1/3 nanosecond
+			komputer sekarang cache/SRAM nya 3 level (kata Pak Imam)
+			Pak Imam jago banget
+			Pak Imam ngomongnya sering gak sesuai slide jadi dengerin(?)
+			Intel i7 punya 4 core, tiap core punya SRAM L1-L2 sendiri, tapi SRAM L3 dipake bareng oleh 4 core
+
+WEEK 2
+			
+Senin 31/08/2020
+	TBFO 13.00-14.00
+		7 menit pertama sambil makan :v
+		ngulang DFA pake allinone
+		terus njelasin five-tuple DFA di whiteboard
+		terus bikin contoh DFA berawal 01 atau berakhir 01
+		tulisan Pak Judhi bagus :0
+		wah bisa export .png whiteboard, aku nyoba
+		lol whiteboardku broken
+		mbahas beberapa contoh DFA lagi
+
+	Logkom 14.00-16.00
+		nonton yutub
+		https://youtu.be/8fmMY7RN51c -> Definition and Syntax of Proportional Logic
+			jenis syntax:
+				1. simple sentence (ada aturan penamaannya, harus alphanumeric dan diawali lowercase)
+				2. compound sentence
+		https://youtu.be/gjBrTbnub3Q -> Compound Sentence
+			operation (sorted by first operated):
+				1. not (negation)
+				2. and (disjunction)
+				3. or (conjunction)
+				4. implication
+				5. reduction
+				6. biimplication
+		https://youtu.be/vU9rGicSN2U -> Semantics in Proportional Logic, Truth Table
+			interpretation: set of T/F values for every simple sentence
+		https://youtu.be/-kU819M5e5w -> Evaluation, Reverse Evaluation, Compound Sentence Classification
+			evaluation: determining truth for certain interpretation
+			reverse evaluation: listing every interpretation which satisfies the sentence
+			klasifikasi compound sentence:
+				1. valid: for every interpretation it is true
+				2. satisfiable: at least true for one interpretation
+				3. unsatisfiable: always false
+
+		Pak Judhi share slide 14.48
+		lol precedence yang dibilangin Pak Judhi beda sama yang di Youtube
+		hidup parentheses
+		bedanya:
+			1. kalo and or banyak yang dikerjain yang kiri dulu
+			2. kalo implikasi biimplikasi banyak yang dikerjain yang kanan dulu
+			3. implikasi dulu baru biimplikasi (kalo youtube setara)
+		cara assign interpretasi i ke compund sentence lucu, kayak pangkat
+		note: truth table biimplikasi kebalikan xor
+		Pak Judhi nonton yutub
+		beda lagi:
+			satisfaction Pak Judhi berarti reverse evaluation (gak ngerti maksudnya apa sih)
+			ada examplenya, ada 3 compound sentence, terus nyoret row truth table yang false
+			wut
+		axiomatizability (wtf wat is this)
+			ada vector of interpretation
+			ada compund sentence, kayaknya sentencenya true untuk semua isi vector
+		soal The Big Game
+
+	Algeo 16.00-17.00
+		tentang SPL
+		bentuk umum
+		bentuk matriks
+		bentuk perkalian matriks
+		matrix augmented: matrix AX=B jadi [A|B], untuk ngeringkes SPL
+		operasi matrix augmented (OBE):
+			1. ngaliin baris pake konstanta tidak nol
+			2. tuker 2 baris
+			3. tambahin baris dengan kelipatan baris lainnya (satu persatu elemen)
+		nyelesaiin SPL -> nerapin OBE ke matrix augmented sampe jadi matrix eselon baris
+		kalo jadi:
+			eselon baris -> Eliminasi Gauss
+			eselon baris tereduksi -> Eliminasi Gauss-Jordan
+		foto muka Gauss sama Jordan :v
+		Eliminasi Gauss:
+			1. nyatain SPL dalam matrix augmented
+			2. OBE sampe jadi matrix eselon baris
+			3. backward substitution, selesaiin satu persamaan pake persamaan bawahnya
+		(contoh Eliminasi Gauss)
+		(2 contoh Eliminasi Gauss lagi tapi infinite-sol karena ada baris nol di matrix eselon baris)
+		(solusinya dibikin parametrik juga)
+		(contoh Eliminasi Gauss lagi tapi no-sol karena 0 0 0 0 -1)
+
+
+Selasa 01/09/2020
+	Orkom 13.00-14.00
+		nonton video sampe 13.30
+		videonya ada di ms teams folder pekan 2
+		isinya bit, byte, tipe data C, konversi dec-bin-hex
+		note:
+			hex di C depannya 0x
+			2 digit hexa 1 byte
+			ada yang namanya "word size"
+			little endian msb di awal, big endian di akhir (ini ngetiknya pake ingatan, paling salah :v)
+
+	Alstrukdat 14.00-16.00
+		nonton video di lms sampe 14.50
+		banyak detil jadi nggak nyatet :/
+		belajar pointer, contoh ADT jam, array dinamis
+		masuk meet 14.50
+		Pak Ardian njawab pertanyaan dari kuliah Kamis
+		hmm lagi males nyatet, kayaknya sambil implemen praktikum bisa
+
+	Matdis 16.00-18.00
+		langsung masuk meet
+		note Bu Ulfa: hafalin hukum aljabar himpunan, dipake untuk proof ujian
+		outline hari ini:
+			hukum aljabar himpunan
+			dualitas himpunan (wow keren)
+			inklusi-eksklusi
+			partisi
+			multiset
+			pembuktian proposisi pada himpunan:
+				pake diagram Venn (informal)
+				pake tabel keanggotaan
+				pake hukum aljabar himpunan
+				pake definisi
+			implementasi himpunan
+		baca slide di web Pak Rin http://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2020-2021/Himpunan(2020)-2.pdf
+		slidenya 54 slide btw
+		hukum aljabar himpunan:
+			1. identitas 		-> A n U = A; A u {} = A
+			2. null/dominasi	-> A u U = U; A n {} = {} 
+			3. komplemen		-> A u komplemen(A) = U
+			4. idempoten		-> A u A = A
+			5. involusi			-> komplemen(komplemen(A)) = A
+			6. penyerapan		-> Au(AnB) = A
+			7. komutatif		-> AuB = AnB
+			8. asosiatif		-> AuBuC = AuCuB (notice operasinya sama)
+			9. distributif		-> Au(BnC) = (AuB) n (AuC)
+			10. de morgan		-> komplemen digedein, u/n dibalik :v
+			11. 0/1				-> komplemen {} = U
+		dualitas:
+			kalo pernyataan himpunan dibalik:
+				n jadi u, U jadi {}, komplemen tetap
+			pernyataannya tetep bener
+		inklusi-eksklusi:
+			|AuB| = |A| + |B| - |AnB|
+			|A xor B = |A| + |B| - 2|AnB|
+			kalo banyak himpunan jadi +-+-+-
+		partisi:
+			kalo digabung jadi A, kalo diiris jadi {}
+		multiset:
+			multiplisitas(x) = cnt(x)
+			|A| = jumlah elemen di multiset A
+			kalau digabung, tiap elemen diambil multiplisitas tertinggi
+			kalau diiris, tiap elemen diambil multiplisitas terendah
+			P-Q ngurangi tiap multiplisitas, tapi kalo negatif jadi 0
+			P+Q njumlahin tiap multiplisitas
+		proof method
+		...
+		(gak ngelanjutin)
+
+Rabu 02/09/2020
+	KWN 07.00-09.00
+		ngerjain quiz, dapet 90
+		baca drive pekan 2 https://drive.google.com/drive/folders/1KRngTfxknRlLysV9WG_vHmlqnpmKscLw
+		nonton video multikulturalisme
+		masuk grup tugas makalah & jurnal
+
+	Agama 09.00-11.00
+		ngaji Al-Baqarah
+		ada ppt di ms teams, judulnya 2. Konsep Dasar Ajaran Islam, aku download
+		Pak Agus ceramah yey
+		5 selamat yang dijamin Islam:
+			1. selamat jasmani
+			2. (duh nggak ngelanjutin, nginstall check :v)
+
+	Algeo 14.00-16.00
+		langsung sinkron
+		masih sambil install check hhh
+		wah ada visualisasi matrix 3 kemungkinan spl
+		Eliminasi Gauss-Jordan
+			ngubah augmented matrix jadi matrix eselon baris TEREDUKSI dulu
+
+		nonton video 
+			https://www.youtube.com/watch?v=p2cjxvMfqwE Elim Gauss-Jordan
+				oalah subs. mundur yang biasa di cp itu backward-phasenya Gauss-Jordan :v
+				Sistem Persamaan Linear Homogen: rhs nol semua, nol solusi trivial
+				SPL disebut "konsisten" kalo punya solusi, kalo nggak jadi "inkonsisten"
+				ngitung matrix inverse pake Gauss-Jordan:
+					convert [A|I] ke [I|A^-1] pake Gauss-Jordan
+					[A|I] berarti A konkat matrix identitas
+					kalo ada baris full 0, A gapunya inverse (singular)
+					kalo A singular, Ax=B gapunya solusi tunggal, analog A tidak singular
+				nyelesaiin SPL pake inverse:
+					Ax=B
+					(A^-1)Ax=(A^-1)B
+					x=(A^-1)B
+					bagus kalo B nya ganti-ganti, tinggal kaliin inverse A
+			https://www.youtube.com/watch?v=wayWhUW1reM Aplikasi SPL 1 (soal gizi, segitiga teknil sipil, analisis rangkaian)
+			https://www.youtube.com/watch?v=l9T9Jx8ZnnQ Aplikasi SPL 2 (interpolate)
+				p(x)=a0+a1x1+x2x2^2+...=y
+				subs semua nilai (x0, x1, x2, ..., y)
+				cari a0, a1, a2... pake elim Gauss/Gauss-Jordan
+
+	TBFO 16.00-18.00
+		langsung sinkron
+		tanya-tanya soal DFA
+		NFA
+			Kata Pak Judhi gaada di slide, adanya di textbook/allinone
+		 	edge bisa dipake sesuka hati di satu state, boleh banyak, boleh gaada
+		 	quintuple NFA: (states, alphabet, transisi, satu start state, final state (set))
+		 	gatau beda quintuple NFA sama DFA apa
+		 	oh kalo di NFA hasil fungsi transisi set of states, kalo di DFA hasil fungsi transisi state
+		 	wtf final statenya NFA juga set of states
+		 	kalo ada yang final di satu set tetep dibintang di tabel
+		konversi DFA-NFA
+			untuk tiap DFA A ada NFA B sehingga L(A)=L(B), language yang diterima sama
+			tiap lingkaran state DFA nya jadi set of states di gambar :v
+		njir nggak nyimak tiba-tiba ada tabel isinya lambang huruf besar :v
+		E-NFA: bisa nerima epsilon
+			contohnya buat nerima desimal, dia bisa nerima tanda +- dulu bisa nggak
+			atau nerima desimal berulang-ulang, terus tiba-tiba bisa final state
+			lah kayak state muter-muter di final state dong
+		ECLOSE
+			ECLOSE(P): set of all states reachable from P with epsilons, including P
+			ada inductive definitionnya, mungkin berguna buat proof
+			dipake untuk construct DFA dari NFA
+
+Kamis 03/09/2020
+	Praktikum Alstrukdat 11.00-12.40
+
+	Matdis 15.00-16.00
+		Outline kuliah
+			Matriks
+			Relasi: himpunan pasangan
+			Representasi relasi
+			Sifat relasi biner pada sebuah himpunan
+		batin di awal kuliah:
+			watdehek is relasi
+			coba dibayangin kayak graf?
+			(a,b) berarti ada edge berarah a ke b
+		baca slide kuliah di gclassroom
+			relasi biner R adalah himpunan bagian dari perkalian dua himpunan (AxB)
+			notasi:
+				a R b : a dihubungkan dengan b oleh R
+				a (R coret) b : converse
+			A domain, B kodomain
+			relasi dalam SATU himpunan adalah relasi khusus
+				bisa digambar pake digraph
+				A x A
+				(a,a) itu gelang/kalang/loop
+			sifat-sifat:
+				Refleksif:
+					tiap node punya self-loop
+					diagonal utama adjm nya 1 1 1 1 1 
+			(yah dah habis waktu mbaca)
+
+	Alstrukdat 16.00-18.00
+		K1 ikut kelasnya Pak Ardian
+		nonton video & baca materi dulu sampe 16.50
+		aku dah nonton semua kemarin Selasa jadi santuy hehe
+		nggak merhatiin sesi sinkronnya, intinya Pak Ardian skimming slide sambil nerima pertanyaan
+		ditanya ada anak olim komp apa enggak tapi aku diem :v
+		Arroisi nggak didaftarin komp ternyata
+
+Jumat 04/09/2020
+	KWN 09.00-11.00
+		ini bukan kuliah
+		ini ceritanya nyari bahan untuk tugas makalah
+		ide:
+			judul: perbedaan bentuk desa Orde Baru dan sekarang (Reformasi)
+			intinya:
+				UU no.5 tahun 1979 (Orde Baru):
+					desa diseragamkan
+					banyak suku terpaksa melawan adat
+						nagari di Minangkabau
+						dusun dan marga di Palembang
+						gampong di Aceh
+						huta, sosor, dan lumban di Mandailing
+						kuta di Karo
+						binua di Kalimantan Barat
+						yo di Irian Jaya
+					desa bukan masyarakat hukum: cuma boleh menyelenggarakan rumah tangga, gaboleh ngatur dan ngurus desa
+					jadi desa nggak otonom
+					di desa ada Lembaga Musyawarah Desa, fungsinya untuk representasi desa dan nampung aspirasi, tapi gapunya kekuasaan legislatif
+					kepala desa jadi ketua LMD
+					hak ulayat dan hak atas sumber kehidupan hilang, kayak hutan, diambil alih sama pemerintah tingkat I dan II
+					UU ini aktif 30 tahun, ganti tahun 1999, UU no.22 1999
+
+				UU no.6 tahun 2014 (sekarang):
+					ada desa dan desa adat bisa disebut "desa" atau nama lain
+					punya wewenang ngatur dan ngurus pemerintahan sendiri, otonom
+					(?) punya hak tradisional tapi harus diakui dan dihormati sistem pemerintahan NKRI
+					(duh belum baca, panjang)
+
+	Orkom 15.00-17.00
+		Two-complement
+			untuk nyimpen negatif
+			lebih umum dipake daripada one-complement
+			punya keuntungan dibanding one-complement:
+				operasi ez
+				representasi 0 cuma 1
+			bit paling kiri = -(2^bit)
+			somehow jadi bit positif di-flip + 1 (?)
+			maxval = 01111...
+			minval = 10000...
+			-1 = 11111...
+			kalo overflow juga nge-wrap, maxval+1 jadi minval
+			casting signed ke unsigned nggak ngubah value biner, vice versa
+		constant di C kalo belakangnya U jadi unsigned, ex. 0U, 123U
+		expanding, truncating
+			nambah/ngurangi digit bit
+			terjadi kalo casting
+		kapan pakai unsigned?
+			dont: kalo bil gak negatif (sering bug)
+			do: modular arith, bitmask
+		shift right
+			wow kalo negatif di-(>>) muncul trailing 1
+			kalo negatif, arithmetic shift
+			kalo positif, logical shift
+			jadi kayaknya kalo negatif di-shift tetep *2 /2 (?)
+
+WEEK 3
+
+Senin 07/09/2020
+	TBFO 13.00-14.00
+		ngubah NFA ke DFA
+			Qd state DFA, Qn state NFA
+			Qd powerset Qn; Qd={s|s subset Qn}
+			jadi |Qd|=2^|Qn|
+
+			Fd final state DFA, Fn final state NFA
+			Fd={s|s subset Qn, s irisan Fn tidak kosong}
+
+			Contoh: nulis deltaD NFA di allinone
+			delta({q0},epsilon) = {q0}
+			delta({q0},'0') = {q0,q1}
+			delta({q0,q1},'1') = {q0} gabung {q2} = {q0,q2}
+			delta({q0,q2},'0') = {q0,q1} gabung {} = {q0,q1}
+
+			ECLOSE (haduh gak ngerti pakenya gimana)
+
+			latihan soal
+				diberikan tabel NFA, convert ke DFA
+				telusuri dari start, tiap ada state baru telusuri lagi (somehow kayak BFS)
+
+				delta({p},0) = {p,q}
+				delta({p},1) = {p}
+
+				delta({p,q},0) = {p,q,r} (penggabungan himpunannya gak kutulis :v)
+				delta({p,q},1) = {p,r} (upd: Kata Pak Judhi uraian penggabungannya harus ditulis)
+
+				delta({p,q,r},0) = {p,q,r,s}
+				delta({p,q,r},1) = {p,r}
+
+				delta({p,r},0) = {p,q,s}
+				delta({p,r},1) = {p}
+
+				delta({p,q,r,s},0) = {p,q,r,s}
+				delta({p,q,r,s},1) = {p,r,s}
+
+				delta({p,q,s},0) = {p,q,r,s}
+				delta({p,q,s},1) = {p,q,s}
+
+				delta({p,r,s},0) = {p,q,s}
+				delta({p,r,s},1) = {p,s}
+
+				delta({p,s},0) = {p,q,s}
+				delta({p,s},1) = {p,s}
+
+				kalo dah punya transisi gambar ae DFA nya
+				terus karena s final state NFA, final state DFA: semua state yang mengandung s
+				kalo ngerjain delta-delta pas ujian, nulisnya nggak lengkap gapapa, kayak 1. 2. 3. ... 10.
+				yang penting langkahnya sebutin
+
+	Logkom 14.00-16.00
+		nonton yutub sampe 14.30
+			https://youtu.be/mr3TPFbutbY - Logical Entailment
+				penulisan formal entailment:
+					a|=b
+					a entails b
+					a set premis, b konklusi
+					iff every interpretation that satisfies a also satisfies b
+					a#=b
+					a does not entail b
+				ngecek logical entailment ada 2 cara:
+					semantic reasoning: truth table, validity check, unsatisfiability check
+					proof method: rules of inference, axiom schemata, propotional resolution
+			https://youtu.be/-QUxDPi2agc - One Table Approach
+				truth table - one table approach
+				{a,b,c,d,...} |= p
+				validity check: a^b^c^d^... -> p valid
+				unsatisfiability check: a^b^c^d^...^(~p) unsatisfiable
+				note: unsatisfiable = every premis combin false
+				ex
+					{p}|=(pvq)?
+					validity check: p -> (pvq) valid? (cek pake tabel kebenaran)
+					unsatisfiable check: p ^ ~(pvq) unsatisfiable? (cek pake tabel kebenaran)
+				advantage: ez to understand
+				disadvantage: 2^n kombin
+			di gmeet latihan soal
+			soal ada di ms teams
+			gak nyimak :', chat line sama baca manga
+
+	Algeo 16.00-17.00
+		ngejain soal Pak Rila di WA
+		nyobain elim Gauss-Jordan pake tangan, asik juga
+		nyobain inverse pake Gauss-Jordan juga
+
+
+Selasa 08/09/2020
+	Orkom 13.00-14.00
+		rebahan 20 menit karena mati listrik :v
+		kukira gaada kelas, cuma latihan soal
+		ternyata ada T_T
+		jadi gak masuk kelas
+		tapi nggak lupa absen kok
+
+	Alstrukdat 14.00-16.00
+		nonton video sampe 14.50
+		videonya ada di stei19.kuliah
+		1. Array
+			tipe datanya sama
+			kontigu
+			diakses pake indeks
+			contoh akses (assign): a[1]=...
+			array statik: memori dialokasi pas compile
+			array dinamis: memori dialokasi pas runtime
+			array kosong kalo belum dikasih value
+			array penuh kalo semua memorinya dah dikasih value
+			indeks array harus ordinal diskrit
+			-notalgo-
+		2. Array statis vs dinamis
+			array statik: memori dialokasi pas compile, memori gabisa diubah
+			array dinamis: memori dialokasi pas runtime, ukurannya gak diketahui pas compile time
+			-notalgo-
+				ada alokasi() sama dealokasi() lol
+				ntar baca di diktat kalo perlu
+		3. ADT List
+			list: sekumpulan elemen bertipe sama, ordered
+			istilah:
+				head/first: elemen pertama list
+				length: #elemen list
+				list kosong: list yang gapunya elemen 
+				traversal: ngunjungi semua elemen list dari awal sampe akhir
+			operasi:
+				isEmpty()
+				search(val)
+				length()
+				get(pos)
+				set(pos,val)
+				concat()
+				insert()
+					di awal
+					di akhir
+					di posisi tertentu
+					setelah elemen tertentu
+				delete()
+					di awal
+					di akhir
+					di posisi tertentu
+					elemen tertentu
+			implemennya bisa pake array/berkait
+			yang berkait dibahas di minggu-7
+		4. implemen list pake array
+			alat bahan:
+				1. array ukuran tertentu
+				2. cara ngecek indeks dah keisi apa belom
+					bisa implisit, kasih value kayak -1, traverse pake while
+					bisa eksplisit, simpen nilai eff, traverse pake for
+			insert/delete kiri/kanan:
+				elemen nggak rata kiri (lol wtf)
+				handle beberapa kasus (cari elemen efektif pertama dll.)
+
+		mulai sinkron
+		biasa la skimming sambil tanya-tanya
+		Pak Ardian berangkat phd bulan depan :0, gatau masih bisa ngajar apa harus cuti
+		ADT -> buat abstraksi, user gak perlu mikir cara kerjanya
+
+	Matdis 16.00-18.00
+		Outline kuliah
+			review himpunan & relasi
+			relasi inversi
+				R'={(a,b)|(b,a) anggota R}
+				kalo pake matrix cara ndapetinnya nge-transpose matrix
+			kombinasi relasi
+				iris, gabung, subtract, xor
+				iris = AND, gabung = OR
+				kalo pake matrix, matrixnya di-and/or/subtract/xor
+				note subtractnya kayak himpunan, gabisa negatif
+			komposisi relasi
+				relasi di-relasiin
+				S o R = {(a,c) | a anggota A, c anggota C, untuk beberapa b (a,b) anggota R dan (b,c) anggota S}
+				notice urutan S o R kebalik
+				kalo pake matrix, matrixnya dikaliin, tapi kali diganti ^, tambah diganti v.
+			relasi n-ary (lebih dari 2 himpunan)
+				penerapannya di basis data
+			fungsi
+				relasi biner yang metain tepat satu elemen domain ke satu elemen kodomain
+				fungsi satu-ke-satu, pada, korespondensi satu-ke-satu
+			fungsi inverse
+			komposisi fungsi
+				(f o g)(x) = (f(g(x)))
+				tidak komutatif, belum tentu bisa dituker
+			fungsi khusus
+				floor, ceil, mod, factorial, exponensial, log
+			fungsi rekursif
+				basis
+				rekurens
+		baca-baca sampe 17.00
+			representasi fungsi
+				1. himpunan pasangan terurut kayak relasi biasa
+				2. formula assignment f(x)=...
+				3. kata-kata
+				4. source code
+			fungsi satu-ke-satu/injektif kalo gaada dua elemen A yang f(a) nya sama
+			fungsi pada/surjektif kalo tiap elemen B bayangan satu atau lebih elemen A
+			fungsi berkorespondensi satu-ke-satu/bijeksi kalo injektif dan surjektif
+
+Rabu 09/09/2020
+	KWN 07.00-09.00
+		submit abstrak makalah
+		nonton video di https://drive.google.com/drive/u/0/folders/1K8GsiHmfHz7EKqrcl1_3jxTx06kz5vOI
+		Pancasila sebagai Filsafat dan Ideologi Bangsa
+		njawab pertanyaan 2 video, njawabnya di ms teams (rame lol)
+
+	Agama 09.00-11.00
+		ngaji sendiri-sendiri
+		asistennya Wibisono :0
+		ada placement test di akhir kuliah, mbaca Q.S. Maryam 1-4
+		tapi ceramah dulu
+		materinya ada di files teams
+
+	Algeo 14.00-16.00
+		nonton video https://youtu.be/uIMOSlN-UtA
+			determinan matrix
+			arti determinan
+				nilai SKALAR dari suatu matrix PERSEGI
+			kegunaan determinan
+				1. menunjukkan luas area 2D yang diapit dua vektor penyusun matrix 2x2
+				2. menunjukkan vol. area 3D yang diapit tiga vektor penyusun matrix 3x3
+				3. ngitung luas segitiga, kalo koordinat titik sudutnya diketahui (wah shoelace)
+				4. nyelesaiin soal SPL
+				5. nyari matrix inverse
+				6. ngitung eigenvalue
+				...
+			cara nyari determinan
+				1. reduksi baris
+					1. OBE sampe dapet matrix segitiga atas/bawah (kalo atas, 0 di segitiga kiri bawah)
+					2. kaliin diagonal matrix segitiga
+					3. kaliin (-1)^p, p=banyaknya operasi nuker baris di OBE
+					hubungan OBE sama determinan:
+						1. kalo satu baris dikali k, determinannya juga dikali k
+						2. kalo baris dituker, determinannya dikali -1
+						3. kalo satu baris ditambah kelipatan baris lain, determinan tetep
+				2. ekspansi kofaktor
+					minor Mij=determinan submatrix yang elemennya gak di baris i/kolom j
+					kofaktor Cij=((-1)^(i+j))*Mij
+					determinan: sum of Aij*Cij dalam satu baris/kolom (tapi ngaliinnya titik/satu-satu kayak skalar)
+					kofaktor di matrix 2x2 ez, tinggal lihat elemen -> rule of Sarrus
+					tips
+						1. gunakan acuan baris/kolom yang banyak 0 nya
+						2. OBE biar dapet baris/kolom yang banyak 0 (njir menarik, bisa rekursi juga, ngitung det 4x4 butuh det 3x3, det 3x3 nya juga di-OBE)
+			teorema determinan (ini sebelum ekspansi kofaktor sih di video) (upd: habis ekspansi kofaktor ada lagi lol)
+				1. kalo matrix punya baris/kolom nol, determinannya 0
+				2. kalo matrix ditranspose, determinannya tetep
+				3. kalo A=BC, det(A)=det(B)det(C) (lol determinannya komutatif)
+				4. matrix gapunya inverse iff determinannya 0
+				5. det(inverse(A))=1/det(A)
+					proof: A*inverse(A)=I <=> det(A)det(inverse(A))=1 <=> det(inverse(A))=1/det(A)
+			pemanfaatan
+				nyontohin nyari inverse
+					adjoin: transpose kofaktor
+					inverse(A)=(1/det(A))(adj(A))
+				cramer rule untuk nyelesaiin SPL
+					SPL: Ax=B
+					x1=det(A1)/det(A), x2=det(A2)/det(A), ...
+					Ai = A, tapi kolom ke-i diganti matrix B (harusnya B nx1, jadi pas satu kolom)
+
+	TBFO 16.00-18.00
+		regex
+			"user-friendly" declarative way of describing regular language
+			dipake di
+				UNIX grep
+				...
+			operasi language
+				union (ez la, language kan himpunan)
+				concat (tiap pair diconcat)
+				power (L^0={epsilon}, L=L, L^(k+1)=L concat L^(k))
+				kleene closure (whut)
+			kalo a elemen powerset L, a regex (hmm ragu)
+			operasi regex
+				(duh miss)
+			example
+				regex for L={w anggota {0,1}* : 0 1 alternate in w} (note: alternate)
+				(01)*+(10)*+0(10)*+1(01)*
+				=(epsilon+1)(01)*(epsilon+0)
+			urutan precedence operasi regex
+				1. star
+				2. dot/concat
+				3. plus
+				ex. 01*+1 di-parentheses (0(1)*)+1
+		ekivalensi FA-regex
+			kemarin dah nunjukin DFA-NFA-eNFA ekivalen
+			sekarang nunjukin FA ekivalen regex
+			yang bisa diubah langsung ke regex cuma DFA
+			we need to establish that
+				1. for every DFA A we can find regex R L(A)=L(R)
+				2. for every regex R there is an eNFA A s.t. L(A)=L(R)
+			theorem 3.4
+				for every DFA A there is a regex R such that L(A)=L(R)
+				proof
+					(anjay banter beut Pak Judhi, mana lompat-lompat)
+				construct example
+					(dammit nyatetnya susah pake text editor, simbol mathnya gila)
+					L(A)={x0y: x anggota {1}, y anggota {0,1}*}
+					R11^(0)=epsilon+1
+					R12^(0)=0
+					R21^(0)={} (gaada path)
+					R22^(0)=epsilon+0+1 (miss sih, ini nebak)
+					(anjay ada hukumnya, buat simplifikasi)
+					Rij^(1)=Rij^(0)+Ri1^(0)(R11^(0))*R1j^(0), pangkat itu length pathnya
+					substisute, operate, and simplify
+					akhirnya R=R12^(2)=1*0(0+1)* yeay
+					tips nyederhanain Pak Judhi: tiap konkat hapus yang nggak berbintang, inget yang berbintang bisa jadi epsilon
+			state elimination technique
+				label edge pake regex, bukan simbol
+				node state bisa di-eliminasi
+				kalo eliminasi state S, update edge path yang pake perantara S
+				quote Pak Judhi: kalo diterapkan pada soal lebih jelas lagi
+				(terus nerapin ke soal beneran)
+			(hmm ngelihat doang bisa ngerti sih kalo regex nyambung sama DFA)
+			(tapi ujian pasti disuruh njabarin)
+			konversi regex-eNFA
+				bikin eNFA untuk tiap suku regex, sambungin
+
+	Rapat Ekstrakampus ISO 19.30-21.00
+		cari nih
+			sacred rianna podcast horror
+			jazzversity
+	
+
+Kamis-Jumat hiatus karena kuliah di Padma sambil latihan padkes lol
+	matdis jenis relasi, alstrukdat gaikut tapi katanya ada Bu Inge sama Piko, orkom ngerjain latihan soal
+
+WEEK 4
+
+Senin 14/09/2020
+	TBFO 13.00-14.00
+		latihan soal e-NFA sama E-CLOSURE di meet
+		kata Girvin soal pr lol
+
+	Logkom 14.00-16.00
+		nonton yutub dulu sampe 14.30
+		oh aku belum baca proofing method: rules of inference & axiom schemata
+		ternyata materinya wtf wkwk
+		video 1:
+			clausal form: form proposisi pake negasi sama disjungsi doang
+			konversi ke clausal form:
+				I: Implikasi
+					P1->P2: ~P1 or P2
+					P1<-P2: P1 or ~P2
+					P1<->P2: (~P1 or P2) and (P1 or ~P2)
+				N: Negasi
+					involusi (negasi negasi)
+					De Morgan
+				D: Distribusi
+					distribusi
+					asosiasi
+				O: Operator
+					P1 or P2 or P3 or ... = {P1,P2,P3...}
+					P1 and P2 ans P3 and... = {P1}{P2}{P3}...
+		video 2 belum nonton :v
+		mingdep kuis, pilgan
+		sinkron:
+			Pak Judhi njelasin pake textbook
+			buat apa clausal form? buat ngerjain pake proportional resolution
+			proportional resolution cuma bisa untuk clausal form
+			"dihafalkan ini, sering keluar"
+			Resolution: ngerjainnya kayak pake rules of inference
+			kalo mau ngeprove q -> bikin premis ~q / gabungin kesimpulan sama ~q, terus Resolution, kalo gaada kesimpulan q terbukti
+			(contoh-contoh)
+			note: ~p dan p saling menghilangkan karena tautologi
+
+	Algeo 16.00-17.00
+		mulainya 16.10 karena Pak Rila sholat dulu
+		kuis 1 Senin minggu depan: matriks, spl, determinan
+		Vektor di Ruang Euclidean
+			Ruang Vektor/Ruang Euclidean: ruang tempat vektor didefinisikan; R2, R3, Rn
+			semua vektor v=(v1,v2,...) berawal dari origin O
+			vektor 0 = (0,0,0,...)
+			negatif vektor v ditulis -v
+			operasi vektor:
+				njumlahin vektor: pake kaidah parallelogram/segitiga
+				pengurangan vektor: v-w = v+(-w)
+				perkalian vektor-skalar
+			vektor yang nggak berawal di titik asal
+				di R2:
+					misal vektornya v dari P1 ke P2,
+					v=P1P2=OP2-OP1
+				di Rn n>=3 sama juga, pokoknya acuannya origin
+			norma vektor = magnitude vektor = panjang vektor
+			euclidean distance = sqrt(x*x+y*y+z*z+...)
+
+Selasa 15/09/2020
+	Orkom 13.00-14.00
+		mbahas latihan soal
+		kalo mau ngubah ke floating point IEEE lihat dulu dia normal atau denormal
+			kalo x <= 2^(-bias+1), dia denormal
+			kalo x > 2^(-bias+1), dia normal
+			(maybe) kalo eksponennya sama dengan bias, dia denormal
+			jadi tentuin dulu batas maks denormal, 2^(-bias+1)
+		membulatkan frac/mantissa cuma boleh ke genap, tapi bisa ke bawah/atas (whut)
+			kayaknya maksudnya cuma boleh genap hasil truncate-nya, oke
+
+		(entah kenapa putus-putus, my internet rly bad)
+
+	Alstrukdat 14.00-16.00
+		nonton video dulu sampe 14.50
+		videonya tentang matriks
+		skimming pdf matriks kayak biasa
+			struktur internal: penyimpanannya di RAM
+
+	Matdis 16.00-18.00
+		outline kuliah: induksi matematika
+			ada induksi dari 1, ada induksi dari n0 (rampatan)
+		mbahas soal untuk persiapan kuis
+
+Rabu 16/09/2020
+	KWN 07.00-09.00
+		baca ppt sampe 07.30
+		judul ppt nya Identitas Nasional
+		seat call 80 orang, setengah jam
+		diskusi identitas nasional
+		agak laggy, sempet ke-dc
+		cara penulisan:
+			UUD NRI Tahun 1945
+			Undang-Undang RI Nomor ... Tahun ... tentang ...
+
+	Agama 09.00-11.00
+		ngaji, aku ngaji An-Nuur 1-22
+		materi hari ini Al-Quran
+		cepet juga selesainya, jam 10 lebih
+		terus tidur sampe jam 1 :v
+
+	Algeo 14.00-16.00
+		rilis tubes & java di gmeet gabungan 4 kelas
+		spek: http://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Tubes1-Algeo-2020.pdf
+		intro java: http://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Pengantar-Pemrograman-dengan-Bahasa-Java-2020.pdf
+		sheet: http://bit.ly/PendataanTubesAlgeo1
+		sekelompok sama Girvin sama Jojo yeay
+
+	TBFO 16.00-18.00
+		mbahas soal regex di meet
+		yeay Jejen bikin note isinya link meet tiap matkul di K04 Homies
+		insight baru:
+			boleh nulis epsilon di regex
+			contohnya di exercise 3.1.1 (c): bikin regex yang nerima string s.t. adjacent 1 cuma muncul max sekali
+			(1+epsilon)(0+01)*(0+10)*(1+epsilon)
+		convert DFA ke regex
+			"basically Floyd-Warshall kan" -Kinon
+			damn aku kudu baca materi ini lagi, gak ngerti di kuliah :'
+			exercise 3.2.1: kenapa DFA = regex Rij^(k)=R13^(3)? karena i=1=start state, j=3=final state, k=3=num of step
+			
+
+Kamis 17/09/2020
+	Praktikum Alstrukdat 11.00-13.00
+		yeay fullscore
+	Matdis 15.00-16.00
+		kuis, gatau hasilnya bakal gimana
+	Alstrukdat 16.00-18.00
+		kuis, gatau juga hasilnya bakal gimana
+
+Jumat 18/09/2020
+	Orkom 15.00-17.00
+		pengenalan praktikum
+		lol deadlinenya Minggu
+		terlihat asik praktikumnya
+		gak nyatet qna, sad
+		
+WEEK 5
+
+Senin 21/09/2020
+	tbfo libur, buat belajar mandiri
+	terus kuis logkom sama algeo
+
+Selasa 22/09/2020	
+	Orkom 13.00-14.00
+		intro Assembly
+		dongeng intel x86 processor
+			CISC, Complex Instruction Set Computer
+			bisa operasi kompleks
+			>sejarah intel x86: 8086, 386, pentium 4, core 2, core i7
+			x86 clones: Advanced Micro Devices (AMD)
+				a bit slower, a lot cheaper
+		about gcc
+			kalo gcc hello.c, arsitektur assemblynya ngikut mesin
+			bisa dikasih flag -m32 atau -m64 buat specify
+			flag -Ox buat optimasi, x nya bilangan 0..6 katanya
+			lol berarti ada -O6
+			flag -S untuk compile jadi text/asm program
+			flag -o untuk compile jadi executable
+
+	Alstrukdat 14.00-16.00
+		nonton video dulu
+		"mesin karakter", huh
+			termasuk mesin abstrak
+			punya pita yang diakhiri mark
+			punya tombol start sama advance
+			punya window satu karakter, bisa ngintip karakter
+			statenya ditentukan Current Character (CC) sama lampu flag End of Pita (EOP)
+			> segmen operasi-operasi mesin karakter
+			wah pake fopen fscanf fclose
+		"mesin kata"
+			kayak mesin karakter, tapi windownya untuk satu kata dipisah blank
+			di kuliah ada 3 versi kata di pita karakter
+			kasus kata di pita:
+				a. pita berisi titik doang
+				b. isinya blank terus titik
+				c. ada blank di awal sama akhir pita, di tengah ada kata
+				d. gaada blank di awal atau akhir pita, habis kata terakhir langsung titik
+				e. ada blank di akhir pita
+				f. ada blank di awal pita
+			versi 1
+				kata diakuisisi mulai dari karakter pertama sesudah akhir kata (atau karakter pertama pita untuk kata pertama)
+				di akhir proses ada boolean EndKata, true kalo kata terakhir udah diproses
+				EndKata=true kalo nemu mark
+				gambar di slide cukup mendukung
+				ilustrasi
+					____abcdef___ghi___.
+					0000000000111111222 <-- nomer kata per indeks
+				punya ignoreblank() untuk ngilangin blank di kata
+				ada cara kompilasinya di yutub lol
+				di .h ada variabel extern karena dia dideklarasiin di .c
+			versi 2
+				sama kayak versi 1, tapi akhir proses akuisisi adalah kata kosong
+				gambar di slide juga cukup mendukung
+				ilustrasi
+					___abcdef___ghi___.
+					000000000111111222 <-- nomer kata per indeks
+					lol ilustrasinya persis versi 1
+					tapi buat tau pembacaan pitanya selesai apa belum pakenya panjang kata
+					kalo panjang katanya 0, selesai (blank gak dianggep)
+			versi 3
+				ngabaiin blank di awal pita, terus proses sisanya -> model akuisisi tanpa mark
+				kata yang diakuisisi tidak pernah kosong
+				ilustrasi
+					___abcdef___ghi___.
+					iii000000000111111 <-- nomer kata per indeks
+					i artinya initakses
+					ceritanya initakses ngabaiin blank di awal pita
+		implementation details
+			extern <type> <var> : this variable is declared somewhere else
+			static <type> <var> : this variable wont be exposed to other files (?)
+			fscanf punya nilai return, kayaknya berhasil scan apa enggak?
+
+	Matdis 16.00-18.00
+		outline kuliah
+			pembuktian untuk pernyataan bilangan bulat w/ induksi
+			induksi yang dirampatkan
+			strong induction
+			aplikasi induksi untuk memeriksa kebenaran program
+		baca materi strong induction
+		latihan soal di slide strong induction, gabisa yang himpunan wkwk
+
+
+Rabu 23/09/2020
+	KWN 07.00-09.00
+		ngumpulin makalah yey
+		ada presentasi makalah mulai pertemuan depan
+		baca slide materi, kayaknya tentang negara hukum
+		sambil baca Harlem Beat (Tomomi best girl)
+
+	Agama 09.00-11.00
+		ngaji (nyimak Kang Rifqy doang sih)
+		ndengerin materi, kayaknya tentang Al-Quran lagi
+		putus-putus, sad
+		
+	Algeo 14.00-16.00
+		nonton video
+		1. vektor satuan, kombinasi linear vektor, dot product, ortogonal, vektor normal, jarak titik-garis, jarak titik-bidang
+			Cauchy-Schwarz ineq: |u.v|<=|u|.|v|
+				abs. value of dot product is never bigger than product of norms
+			vektor 0 selalu ortogonal sama semua vektor
+			himpunan ortogonal: set of vektor s.t. tiap pasang vektor ortogonal
+			himpunan ortonormal: himpunan ortogonal, but its all unit vectors (has length 1)
+			proyeksi ortogonal
+				wow cara nuruninnya beda sama pas sma sama kalkulus
+				but begitu lah
+				u=w1+w2, w1 searah v, w2 ortogonal v
+				w1=((u.v)/|v|^2).v
+				w2=u-w1
+			vektor normal pada garis dan bidang
+				kalo di-dot sama garis sembarang di garis/bidang hasilnya 0
+				yhey kalkulus 2
+			jarak titik-garis/bidang
+				oh no this again
+				lol dikasih rumus doang
+				untuk garis, D=|ax0+by0+c|/sqrt(a^2+b^2)
+				untuk bidang, D=|ax0+by0+cz0+d|/sqrt(a^2+b^2+c^2)
+			jarak bidang-bidang
+				pilih titik di satu bidang, itung jaraknya ke bidang lain
+				kayaknya cuma berlaku kalo bidangnya sejajar?
+			perpotongan garis-bidang
+				bikin garisnya jadi persamaan parametrik, terus subs ke persamaan bidang, terus solve
+			vektor dan persamaan parametrik di R2 dan R3
+				>hmm balik lagi ntar kalo butuh kali ya?
+				oh ternyata ez
+				ndeskripsiin garis sama bidang bisa pake vector form
+				kalo didistribusiin jadi parametric form
+				garis l=x0+sx1, s real number, x0 x1 two points
+				bidang b=x0+sx1+tx2, s t real number, x0 x1 x2 three points
+
+		2. aplikasi vektor: Information Retrieval
+
+	TBFO 16.00-18.00
+		Senin depan kuis, materinya sampe konversi NFA-DFA
+		latihan soal konversi DFA ke regex pake state elimination
+			oalah state elimination gitu
+			misal hapus state v. untuk tiap path u->v->w yang labelnya a sama b, buat edge u->v yang labelnya ab (a sama b dikonkat)
+			kalo ngehapus cycle, muncul *, karena bisa diulang-ulang
+			kalo pathnya banyak, muncul +, karena tiap path jadi string sendiri
+		Pumping Lemma
+			"if somebody presents you with fake regular language, use pumping lemma to chow contradiction"
+			wow
+			terus gak ngerti lol
+			kata Kinon abuse pigeonhole
+
+Kamis 24/09/2020
+	Praktikum Alstrukdat 11.00-13.00
+		fullscore sejam yey
+
+	Matdis 15.00-16.00
+		baca materi di classroom dulu
+		Rekursi dan Relasi Rekurens
+
+	Alstrukdat 16.00-18.00
+		baca materi queue, skimming materi pas kuliah
+
+Jumat 25/09/2020
+	Orkom 15.00-17.00
+		materi bahasa Assembly
+			C code -> Assembly IA32 code -> object code -> disassembled object code
+			apa yang bisa di-disassemble?
+				anything that can be interpreted as an executable
+			integer registers 32 bit
+				%eax, %ecx, %edx, %ebx, %esi, %edi, %esp, %ebp
+				6 register pertama general purpose
+				32 bit / 4 byte
+				4 register pertama bisa dipecah jadi 2 byte, masing-masing punya nama juga lol
+			perintah assembly
+				mov source, dest
+					movl -> 4 byte, l nya long
+					movb -> 1 byte, b nya byte
+					movw -> 2 byte, w nya word
+					movq -> 8 byte, q nya quad(?)
+					operandnya bisa constant, salah satu integer register, memori
+					kalo constant depannya $, ex: $0x4, $-147 (notice bisa minus dan kalo hexa pake 0x)
+					kalo regis ya pake nama regis
+					kalo memori dikasih kurung bulet (), kalo depannya ada bilangan itu offset/geser
+					(transasi assembly ke C nya nice, gak nyatet tho)
+					gabisa memory-memory transfer dalam 1 instruksi
+					(contoh swap 2 var pake movl)
+					(wah animasinya bagus)
+
+					D(Rb,Ri,S) = Mem[Reg[Rb]+S*Reg[Ri]+D]
+					D = constant displacement, 1/2/4 bytes
+					Rb = base register, any of 8 int regis
+					Ri = index register, any except %esp, %ebp is also unlikely
+					S = scale, 1/2/4/8
+					(kelewatan special case)
+			kode assembly 64 bit lebih ringkas daripada 32 bit
+
+			(ganti slide)
+			arithmetic operations
+				(nyontohin ngitung D(Rb,Ri,S), asik)
+				perintah assembly 2
+					leal source, dest
+						uses
+							computing address without memory reference
+								literally ngitung D(Rb,Ri,S) kayak barusan
+							computing arithmetic operation of form x+k*y, k=1, 2, 4, 8
+						ex
+							leal(%eax,%eax,2),%eax; : x <- x+x*2
+					addl source, dest -> dest=dest+src
+					subl source, dest -> dest=dest-src
+					imull kali
+					sall shl
+					sarl shr
+					shrl shr but logic
+					xorl xor
+					andl and
+					orl or
+					incl +=
+					decl -=
+					negl x=-x
+					notl x=~x
+				(contoh translasi c ke assembly arithmetic function shit)
+				(bisa lompat-lompat baris njir)
+				(wah ada versi color-coded nya)
+				(contoh translasi lagi, but binary operator)
+
+			percabangan (if and co.)
+				gimana cara implemen percabangan di assembly?
+				di processor state ada conditional codes: CF (carry flag), ZF (zero), SF (sign), OF (overflow)
+				implicitly set, side effect arithmetic operation
+				perintah assembly 3
+					cmpl/cmpq src1, src2
+						cmpl b, a like computing a-b without setting destination
+						bisa dipake untuk manipulate conditional codes
+						CF set if carry out msb
+						ZF set if a==b
+						SF set if (a-b)<0 (if signed)
+						OF set if ganti tanda
+					testl/testq src2, src1
+						testl b, a like computing a&b without setting destination
+						bisa dipake untuk manipulate conditional codes juga
+					setX dest
+						set bit dest tergantung kondisi conditional code
+						sete, setne, sets, setns, setg, etc.
+						tabelnya gede wkwk
+						kalo unsigned pakenya seta (above), kalo signed pakenya setg (greater), setb/setl sama juga
+						(contoh translasi pake fungsi greater)
+						typically assembly manggil movzbl (zero, bit (1 bit), long (4 bit)) habis setX
+					jX
+						jump ke different part of code
+						jenis-jenisnya kayaknya sama kayak setX
+						
+Senin 28/09/2020
+	TBFO 13.00-14.00
+		kuis, biasa
+
+	Logkom 14.00-16.00
+		nonton video Pak Judhi di lms (linknya di teams sih)
+		relational logic
+			punya variabel, function constant, object constant, relation constant
+			words: string of letters, digits, _
+			variables: diawali u,v,w,x,y,z
+			constants: diawali alfabet awal (sebelum u)
+				object constants: represent objects, ex: joe, stanford, usa, 2345
+				function constants: represent functions, ex: mother, father
+				relation constants: represent relations, ex: knows, loves
+			arity sebuah relation constant adalah number of arguments constant itu takes
+				unary: person, happy
+				binary: parent, loves
+				ternary: price3, stack
+			signatures
+				set of constants + spec arity relation constant
+				ex:
+					object constants: a, b
+					binary relation: p
+					unary relation: q
+			terms
+				analog dengan phrase dalam natural language
+				represents objects
+				either a variable, object constant, function expression
+			functional term
+				ekspresi fungsi
+				ex:
+					father1(joe)
+					age1(joe)
+					plus2(x,2)
+			sentences
+				three types
+					relational sentences
+						analog dengan simple sentence di natural language
+						ex: q(a,y) (lah fungsi)
+						bukan term, gabisa ditulis nested dengan relational sentence
+					logical sentences
+						analog dengan logical sentence di natural language
+						kayak di proportional logic juga
+						ex:
+							~loves(a,b)
+							loves(a,b) ^ loves(b,a)
+							etc.
+						aturan parentheses kayak di proportional logic
+					quantified sentences
+						menandai seberapa penting variabel dalam kalimat (??)
+						biasanya pake simbol quantifier
+				ground sentence
+					sentence yang gapunya variabel
+					ex: human(joe)
+					false ex: for all x, human(x)
+				open sentence
+					punya variabel bebas, variabelnya di luar scope quantifier
+					ex: p(y) -> there exists x s.t. q(x,y) (y variabel bebas)
+					bound and free variables
+						there exists y s.t. q(x,y)
+						y bound, x free
+				closed sentence
+					gapunya variabel bebas
+		(belum nonton video satunya huhu)
+		terus meet
+
+	Algeo
+		nonton video youtube, linknya di WAG
+		cross product vektor
+			ez, maybe
+			janlup + - +
+			hasilnya vektor
+			misal u x v = w, w tegak lurus u, w tegak lurus v
+			kaidah tangan kanan yeah
+			properties:
+				u x v=-(v x u)
+				u x (v+w)=(u x v)+(u x w)
+				k(u x v)=(ku) x v=u x (kv)
+				u x 0=0
+				u x u=0
+			hubungan sama dot product
+				u . (u x v) = 0 (karena u orthogonal dengan u x v)
+				|u x v|^2 = |u|^2 * |v|^2 - (u.v)^2 (lagrange's identity)
+				u x (v x w) = (u.w)v - (u.v)w
+				(u x v) x w = -(w x (u x v)) = -((w.v)u-(w.u)v) = (w.u)v - (w.v)u (combo yang di atas sama komutatif)
+			also |u x v| = |u||v| sin(t), bisa ditunjukin pake langrange's identity			
+			(cross product in matriks kofaktor form)
+			
+Selasa 29/09/2020
+	Orkom 13.00-14.00
+		latihan soal assembly, soalnya ada di ms teams channel K04
+		jawabannya di class notebook ms teams
+
+	Alstrukdat 14.00-16.00
+		baca materi di lms
+		stack, set, map
+		pertemuan berikutnya pindah kelas
+		bye Pak Ardian :(
+
+	Matdis 16.00-18.00
+		outline kuliah
+			relasi rekurens
+				solusi pake term rekursif
+				solusi tanpa term rekursif
+			relasi rekurens homogen lanjar
+				kalau sequence a memenuhi a_n=x_1*a_n-1+c_2*a_n-2+...+c_k*a_n-k dia punya bentuk a_n=r^n
+				(derajat 2 difokusin)
+				tldr substitusi an=r^n, solve for r^n
+			aljabar boolean
+
+		relasi rekurens homogen lanjar derajat 2
+			persamaan karakteristik: r^2-c1r-c2=0
+			kalo r1!=r2, pake teorema 1
+				an=pr1^n+qr2^n
+			kalo r1=r2, pake teorema 2
+				an=pr^n+nqr^n
+			(nyoba soal-soal di slide google classroom, bisa sih)
+
+		aljabar boolean 2-nilai
+			. itu and, + itu or, ` itu not
+
+		fungsi boolean
+			variabel di fungsi boolean disebut literal
+			bentuk kanonik
+				tiap fungsi boolean bisa ditransform antara:
+					- penjumlahan dari hasil kali
+					- perkalian dari hasil jumlah
+				ex. 
+					f(x,y,z)=x'y'z+xy'z'+xyz (1)
+					=(x+y+z)(x+y'+z)(x+y'+z)(x+y'+z')(x'+y+z')(x'+y'+z) (2)
+				tiap suku literal lengkap di (1) namanya minterm, tiap suku literal lengkap di (2) namanya maxterm
+				nah bentuk kanonik itu cuma boleh punya minterm atau maxterm
+				kalo minterm -> SOP (sum of product)
+				kalo maxterm -> POS (product of sum)
+
+		building bentuk kanonik dari tabel kebenaran
+			1. bikin tabel kebenaran, convert tiap row ke minterm/maxterm
+				kalo bikin minterm, variabel yang 0 dikomplemen, yang 1 biarin
+				kalo bikin maxterm, variabel yang 1 dikomplemen, yang 0 biarin
+			2. pilih mau bikin SOP atau POS
+				kalo SOP, ambil semua minterm yang nilainya 1
+				kalo POS, ambil semua maxterm yang nilainya 0
+
+		building bentuk kanonik dari arbitrary fungsi
+			1. lengkapin tiap literal pake hukum-hukum aljabar (mostly komplemen sama distribusi kayaknya)
+
+		convert POS ke SOP
+			1. De Morgan lol, flip indeks row tabel kebenarannya
+
+Rabu 30/09/2020
+	KWN 07.00-09.00
+		telat bangun :(, bangun 07.20
+		presentasi 4 kelompok, nonton 2 kelompok doang
+
+	Agama 09.00-11.00
+		ngaji
+		materi sunnah, filenya ada di teams
+	
+	Algeo 14.00-16.00
+		nonton video
+		Ruang Vektor Umum
+			lets generalize vector space
+			ruang vektor: tuple of (set elemen, operasi penjumlahan, operasi perkalian skalar)
+			ruang vektor valid kalo memenuhi 6 aksioma:
+				tertutup: kalo u dan v vektor di dalem ruang vektor, u+v harus ada di dalem ruang vektor
+				identitas: penjumlahan dengan 0 dan perkalian dengan 1 harus identitas
+				inverse: u+-u=0, u vektor
+				komutatif: u+v = v+u
+				asosiatif: u+(v+w) = (u+v)+w
+				distributif (skalar): k(u+v)=ku+kv
+			contoh ruang vektor di video:
+				R.V. yang elemennya matriks 2x2
+				R.V. yang elemennya fungsi ex. f(x)
+				R.V. yang elemennya polinom ex. p(x)
+		subruang
+			W subruang V if:
+				tiap vektor di W vektor di V
+				operasi penjumlahan sama perkalian V dicopy ke W
+				W memenuhi aturan operasi penjumlahan dan perkalian skalar ruang vektor
+			contoh subruang:
+				garis yang melalui origin di R2/R3
+				bidang yang melalui origin di R3
+			contoh bukan subruang:
+				kuadran 1 di R2
+
+	TBFO 16.00-18.00
+		somehow meetnya 4 kelas
+		Pak Judhi ngerjain soal Pumping Lemma
+		3 soal in dan aku belum ngerti wkwk
+		ngantuk
+		closure properties of regex
+			mirip closure property ruang vektor
+			operasi closure:
+				union 
+				untersect
+				complement
+				difference
+				reversal
+				closure
+				concat
+				homomorph 	
+				inverse homomoprh
+			semua hasil operasi di atas regex juga
+		komplemen DFA? tuker aja (final/biasa) tiap state
+		wow kayaknya belajar operasi dua FA
+		
+Kamis 01/10/2020
+	Praktikum Alstrukdat 11.00-13.00
+		yah dapet separo doang
+		100/200
+
+	Matdis 15.00-16.00
+		baca materi di classroom dulu
+		aljabar boolean bagian 2: peta karnaugh
+			hmm susah nggambarin di sini
+			pokoknya peta karnaugh bisa untuk nyederhanain fungsi boolean
+			step:
+				1. gambar peta, isi pake 0/1
+				2. kalo SOP, kelompokin 1 adjacent, kalo POS, kelompokin 0 adjacent
+					ngelompokinnya bisa 2, 4, atau 8
+			notasi sigma fungsi boolean bisa dianggep binary mask form kayaknya
+
+	Alstrukdat 16.00-18.00
+		pertama kali masuk kelas K3
+		mulai meet 16.20
+		ADT set, map, hash
+		njir njelasin binser di kelas, malu :<
+		wah kalo latihan soal pake notepad terus sharescreen
+	
+Jumat 02/10/2020
+	Orkom 15.00-17.00
+		solusi latihan bahasa mesin ada di teams
+		mulai kuliah dengan conditional magic
+		di assembly, kalo mau return value, valuenya harus disimpen di %eax
+			kalo valuenya gak di %eax pindah dulu
+			return pake ret
+		kalo convert dari if-else/ternary ke goto, kondisinya biasanya dibalik
+			eq jadi neq
+			l jadi geq
+			g jadi leq
+		problem with jump:
+			"program kudu nebak lompatnya ke mana"
+			"kalo salah nebak terjadi overhead"
+			-conditional branch disruption
+		conditional moves
+			conditional tapi nggak perlu jump-jump
+			operasinya namanya cmov
+				cmov src, dest
+				mindah value src ke dest kalo kondisi terpenuhi
+				suffix cmov: g, eq, neg, l, dll.
+			bad cases for conditional move:
+				val = test(x) ? hard1(x) : hard2(x);
+					kalo hard1(x) atau hard2(x) berat, gak bagus, karena dua-duanya harus dijalanin di conditional moves
+				val = p ? *p : 0;
+					ngecek p null apa nggak, kalo null return 0, kalo nggak return *p
+					kalo p null, bakal error karena *p dijalanin
+				val = test(x) ? x+=1 : x+=2;
+					ngganti nilai x, di conditional moves dua-duanya dijalanin jadi value x ngaco
+				compiler gcc pinter, kalo statement if-else operasinya berat, yang dipake jump/goto
+		jump bisa ke atas, kalo mau loop
+		jump table
+			kalo bikin conditional switch, dibikin jump table
+			isinya label-label jump
+		compiler ngehandle conditional switch yang bolong
+			detil di slide kuliah (im gonna regret this)
+		sisa kuliahnya magic bet dah, takut
+		kudu baca materi nih
+		
+Senin 05/10/2020
+	TBFO 13.00-14.00
+		masih ngelanjutin magic (ekivalensi dua DFA pake TF-algo)
+			gak ngerti :(
+			kudu baca materi nih
+		Minimizing DFA
+			or simplify DFA
+			bikin DFA yang statenya lebih dikit dan tetep ekivalen
+			langsung dipraktekin Pak Judhi :v
+			wah mirip soal UTS 2015, mantap
+			1. bikin tabel tangga
+			2. buletin final state
+			2.5. final state sama final state lain ekivalen, mbentuk satu class
+			3. silang sel intersection final state sama non-final state, in other words, mereka "distinguishable"
+			4. distinguish non-final state: kalo transisi dua state menuju ke keadaan (final/non-final) yang sama, mereka jadi "kandidat ekivalen", selain itu mereka distinguishable
+			5. bikin class ekivalen pake sel "kandidat ekivalen", macem DSU (kayaknya)
+			6. bikin DFA baru, statenya class-class, transisinya former transisi
+			seru juga
+			btw sorry future me kalo gak jelas catetannya
+		yey dicontohin pumping lemma lagi, mari kita liat
+		duh gak ngerti :v
+		"pinter-pinter mencari k s.t. string x(y^k)z gak masuk language"
+		contoh soal homomorphism
+			h(0)=a
+			h(1)=ab
+			h(2)=ba
+			apa nilai h(0120)?
+			konkat aja semua
+			h(0120)=aabbaa
+			L=L(01*2), h(L)=a(ab)*ba
+			h^(-1)({ababa})=(022+110+102)
+
+	Logkom 14.00-16.00
+		nonton video di LMS dulu, be right back
+		Logical Entailment: Referensi dan Axiom (Logika Relasional)
+		fucc did not understand		
+		baru nonton video 6 menit :v
+		mana telat meet, kukira gaada
+		
+	Algeo 16.00-17.00
+		kuis vektor
+		yah salah jawab Information Retrieval
+
+Selasa 6/10/2020
+	Orkom 13.00-14.00
+		stack structure
+			bahasa bisa stack memory -> bisa rekursi
+			tiap pemanggilan fungsi dibikin stack sendiri
+			push -> nambah stack
+			pop -> ngepop stack
+			ez
+			batas bawah stack disimpen di %ebp, batas atas stack disimpen di %esp
+			manggil fungsi pake call (nama fungsi)
+				setup fungsi:
+					pushl %ebp
+					movl %esp %ebp
+					pushl %ebx
+				finish fungsi:
+					popl %ebx
+					popl %ebp
+					ret
+				parameter pertama ada di 8(%ebp)
+				return address ada di 4(%ebp)
+		register handling di fungsi
+			yoo:
+				call who
+			yoo caller, who callee
+			register nya caller: caller save: eax edx ecx
+			register nya callee: callee save: ebx esi edi
+			%eax juga jadi return value integer
+		tbh masih ngerasa ini magic
+
+	Alstrukdat 14.00-16.00
+		nonton video LMS dulu sampe 14.50
+		Struktur berkait
+			- gak harus kontigu di memori
+			- terdiri atas node
+			- node punya dua elemen: info (isi) sama next (pointer ke node selanjutnya, bisa nil)
+			- memori dialokasi sesuai kebutuhan
+			- memorinya jadi lebih gede karena nyimpen pointer juga
+			wah notalgo ada tipe data "pointer to ..."
+			wah mulai pake -> di C, mantap gausah *x.
+		List pakai struktur berkait
+			first(L): alamat memori elemen pertama list L
+			pros: nambah/ngehapus elemen fast
+			cons: nyari indeks tertentu slow
+			P(panah atas).Info: nilai yang disimpan
+			P(panah atas).Next: pointer ke next element
+			njir kalo pake pointer di notalgo, dereference nya pake panah atas
+		Skema dasar pemrosesan list
+			1. traversal
+			2. sequential search
+				1. tanpa bool
+				2. dengan bool
+				cuma beda di syarat while aja sih, 1. pake found, 2. pake (pointer P = nil?)
+		Primitif list linier
+			1. CreateEmpty(L)
+			2. IsEmpty(L)
+			3. Insert(L)
+			4. Delete(L) jangan lupa dealokasi
+			5. Length(L)
+			6. Concat(L1,L2)
+
+	Matdis 16.00-18.00
+		review materi untuk kuis 2
+		ah bikin rangkaian logic ez ternyata
+		tiap fungsi jadi 1 output rangkaian
+		
+Rabu 07/10/2020
+	KWN 07.00-09.00
+		presentasi 3 kelompok lagi, 5-7
+		minggu depan UTS
+
+	Agama 09.00-11.00
+		ngaji, i read the entire Q.S. Nuh
+		materi ibadah
+			ijtihad sungguh-sungguh, orang yang ijtihad namanya mujtahid
+			poin penting ijtihad:
+				1. ijtihad diperlukan untuk merumuskan hukum syara, hukum agama, maksudnya merumuskan hukum yang belum disebut secara eksplisit dalam Al-Quran/hadits
+					yang udah ditetapkan dalam Al-Quran gabisa di-approach pake ijtihad
+					contoh: hukum membunuh janin, kan belum manusia, itu perlu di-ijtihad
+				2. karena ibadah hak Allah, regulator ibadah harus Allah, jadi gabisa di-ijtihad
+			(terus nggak nyatet lagi lol)
+		minggu depan UTS
+		jawaban kuis
+			Sebagai wadah ungkapan rasa syukur dan ampun kepada Allah dan sebagai penguat iman.
+			Simbol dalam ibadah tidak menimbulkan konsekuensi apabila dilanggar, sedangkan norma dalam ibadah menimbulkan konsekuensi apabila dilanggar.
+			Ibadah mahdhah bersifat haram selama tidak diperbolehkan, sedangkan ibadah ghayr mahdhah bersifat halal/diperbolehkan selama tidak diharamkan. Contoh ibadah mahdhah adalah sholat fardu sedangkan contoh ibadah ghayr mahdhah adalah sholat witir (karena dalilnya merupakan hadits).
+
+	Algeo 14.00-16.00
+		ngelanjutin video vector space hehe
+			teorema
+				jika S={w1,w2,w3,...,wn} adalah himpunan vektor di ruang vektor V,
+					1. himpunan W yang berisi semua kombinasi linier vektor-vektor di S adalah subruang V
+					2. himpunan W tersebut subruang terkecil S, jadi sembarang ruang lain yang mengandung vektor-vektor di S juga mengandung W
+				S spanning set W
+				span(S)=w
+				example:
+					vektor satuan {i,j,k} spanning set R^3
+					polinom 1, x, x^2, ..., x^n spanning set ruang vektor Pn
+				contoh meriksa 3 vektor spanning set/membangun R^3
+					1. bikin SPL kombinasi linier 3 vektor
+					2. cek determinan, kalo determinan 0 SPL itu gak konsisten, sehingga SPL nggak mungkin terpenuhi, sehingga nggak membangun R^3
+
+			kebebasan linier
+				pengertian 1:
+					misal V ruang vektor, S={v1,v2,v3,...,vn}, S dikatakan bebas linier iff:
+						k1v1+k2v2+...+knvn=0
+					punya tepat satu solusi k1=0, k2=0, ..., kn=0
+					solusi ini disebut solusi trivial
+				pengertian 2:
+					himpunan vektor S yang sizenya lebih dari 1 bebas linier iff tidak ada vektor di S yang bisa dinyatakan sebagai kombinasi linier vektor lainnya
+				example:
+					{(1,2,3), (2,1,5), (4,5,11)} gak bebas linier
+					why? (4,5,11)=2(1,2,3)+(2,1,5)
+			reminder kalo determinan SPL 0, SPL itu punya solusi non-trivial
+
+			yey ganti video
+			basis
+				jika V ruang vektor, S={v1,v2,...,vn} set of vector in V, S basis V iff:
+					1. S bebas linier
+					2. S membangun/spanning set V
+				jika S basis V, tiap vektor v di V bisa dinyatakan sebagai kombinasi linier
+					c=c1v1+c2v2+...+cnvn
+				tepat dengan satu cara
+				example:
+					v1=(1,2,1), v2=(2,9,0), v3=(3,3,4) basis R^3
+					proof:
+					1. tunjukin v1, v2, v3 bebas linier by showing that k1v1+k2v2+k3v3=0 cuma punya solusi trivial (pake determinan, det(koef SPL) harus non-0)
+					2. tunjukin tiap vektor (w1,w2,w3) di R^3 bisa dinyatain sebagai k1v1+k2v2+k3v3 (pake SPL, tunjukin kalo ada solusi)
+					wah ternyata cukup nunjukin koefisien SPL punya inverse
+
+			dimensi
+				misal V ruang vektor, dim(V) adalah banyak vektor dalam basis
+				contoh:
+					dim(R^2)=2, contoh basisnya i, j
+					dim(R^n)=n,
+					dim(Pn)=n+1 (ruang vektor polinom berderajat n)
+					dim(Mnm)=nm (ruang vektor matriks n*m)
+
+			vektor koordinat
+				misal S={v1,v2,...,vn} basis ruang vektor V s.t. tiap vektor v di V bisa dinyatakan sebagai v=k1v1+k2v2+...+knvn,
+				maka koordinat v relatif terhadap basis S adalah (V)s=(k1,k2,...,kn)
+				bisa dibikin matriks koordinat juga, n baris 1 kolom
+
+			ngubah basis
+				gimana ngubah koordinat vektor kalo basis ruang vektornya diganti?
+				jika kita ngubah basis ruang vektor V dari B={u1,u2,...,un} jadi B'={u1',u2',...,un'}, koordinat basis lama (v)B berubah jadi (v)B' dengan aturan:
+					(v)B=P(v)B'
+				dengan kolom kolom P adalah
+					(u1')B, (u2')B, ...
+				(notice P nya di depan koordinat vektor)
+				P disebut matriks transisi B ke B'
+				kalo P diinverse jadi P', P' matriks transisi B' ke B (mungkin kebalik mana ke mana)
+				algo ngubah basis (ngitung P B->B', matriks transisi B ke B'):
+					1. bikin matriks [B'|B]
+					2. bikin jadi matriks eselon baris tereduksi, jadilah [I|P B->B']
+					notice yang di kiri basis baru, yang di kanan basis lama
+				tetep kudu mikir beda B sama B' biar gak kebalik :/
+
+	TBFO 16.00-18.00
+		latihan soal untuk persiapan UTS
+		bikin Rij
+		ngerjain soal UTS 2017
+		nonton teknik baru: product automaton (DFA)
+			in short ngepair start state terus traverse DFA
+
+	night study notes
+		hati-hati ngasih nama variabel di relational logic, counter examplenya kucing(a)^tikus(a) di video relational proof
+		
+Kamis 08/10/2020
+	Praktikum Alstrukdat 11.00-13.00
+		fullscore setengah jam ez
+		40 menit sih
+	
+	Matdis 15.00-16.00
+		kuis
+		tergocek nomer 3, agak salty
+
+	Alstrukdat 16.00-18.00
+		nilai kuis 1 diumumin, dapet 3.42/4.00 yey
+		terus mbahas kuis, point out common mistakes
+
+Jumat 09/10/2020
+	Orkom 13.00-17.00
+		mbahas soal latihan 4
+		ngerjain soal latihan 5
+		mbahas soal latihan 5
+			parameter fungsi biasanya ditaruh di %esp sebelum call
+			operasi selain leal bisa update conditional code, jadi bisa dipake sebelum jump semua
+			little endian -> low address least significant bit
+			big endian -> low address most significant bit
+
+	Mentoring Agama 19.40-?
+		"Al-Islaamun Mahjuubun bil-Muslimin"
+		tr: Islam tertutup oleh orang-orang Islam
+		sebuah statement instrospektif dari ulama Mesir, Muhammad Abduh, seorang mujtahid/pembaharu, di awal abad ke-20
+		muslim bersikap kayak Islam cuma di ibadah doang
+		slide 1: Islam mencangkup apa aja?
+		slide 2: kondisi muslim saat ini tidak sesuai dengan ajaran Islam sesungguhnya
+			ex. makan tanpa adab, saling menyalahkan, monopoli, kebersihan rendah
+		slide 3: apa yang harus kita lakukan?
+			1. mempelajari/mengkaji Islam lebih dalam
+			2. berusaha melaksanakan Islam dengan kaffah/menyeluruh
+			3. menyampaikan ajaran Islam dengan santun dan merepresentasikannya dalam kehidupan
+		feedback: bit.ly/feedbackmentor-M2
+		NIM mentor: 18118017
+
+Senin 19/10/2020
+	woo lama gak nulis
+
+	TBFO 13.00-14.00
+		meet di teams, gabungan 4 kelas
+		yang ngomong Bu Harlili
+		Context-Free Grammar
+			3 cara represent machine/language: graf, regex, grammar
+			"grammar is more powerful than regex and graph, but it still cant define all languange" -slide
+			"grammar is useful for nested structures" -slide
+			habis ini juga kata slide
+			basic idea is to use variables to represent strings
+			example:
+				CFG for {0^n1^n|n>=1}
+				s->01 (basis)
+				s->0s1 (induction)
+				ez
+				formally,
+				terminal={0,1}
+				variables={s}
+				start symbol=s
+				productions= s->01, s->0s1
+			4 grammar components:
+				1. terminal: symbols of the language
+				2. variables/nonterminals: finite set of other symbols, each representing a language
+				3. start symbol: variable whose language is being defined
+				4. production: variable -> string of variables and terminals (dibaca variabel menurunkan ...)
+			derivation
+				we say aAb => ayb if A->y is a production
+				example:
+					s->01; s->0s1
+					s => 0s1 => 00s11 => 000111
+					hasil derivation gaboleh mengandung variabel
+			iterated derivation
+				=>* itu derivation tapi berkali-kali (bisa 0 kali juga)
+				example:
+					s->01; s->0s1
+					s=>*s
+					s=>*0s1
+					s=>*00s11
+					s=>*000111
+					s=>*0^n1^n
+			sentential forms
+				sialan cepet bet, ketinggalan
+			if G is a CFG, then L(G), the language of G, is {w|s=>*w}
+				note: w must be a terminal string, s is the start symbol
+			*berhenti nulis 1-2 slide, ngomongnya cepet bet*
+			terdapat context-free language yang bukan regular language
+			tidak semua language merupakan CFL
+
+			grammar di programming language ditulis dalam Backus-Naur Form (BNF)
+				terminal ditulis bold atau underline
+				::= menggantikan ->
+				| untuk "or", bisa dipake untuk nyingkat production kayak S->01|0S1
+
+			*berhenti nulis lagi*
+			istilah:
+				leftmost derivation
+				rightmost derivation
+					(kayaknya yang dua di atas basically ngubah variabel kiri/kanan dulu)
+					ada example pake S -> SS|(S)|()
+
+	Logkom 14.00-16.00
+		nonton video di lms
+		video 1: Logical Entailment w/ Resolution: Clausal Form
+			search spacenya jauh lebih kecil daripada axiom schemata
+			"sound and complete"
+			resolution cuma bisa diterapin ke clausal form
+			clausal form
+				literal itu atomic sentence atau negasinya
+				clausal sentence itu literal atau disjungsi literal
+				clause itu set of literals
+				empty clause {} itu unsatisfiable
+			INSEADO
+				mirip INDO tapi INSEADO
+				Implication out
+					p1 <=> p2 jadi (p1=>p2)^(p2>=p1)
+					p1 => p2 jadi ~p1 v p2
+				Negation in
+					involusi & de morgan
+					~(Ax.p) jadi Ex.~p (A itu for all, E itu there exists)
+					~(Ex.p) jadi Ax.~p
+				Standardize variables
+					Ax.p(x) v Ax.q(x) jadi Ax.p(x) v Ay.q(y)
+					intinya bikin variabel beda-beda?
+				Existentials out
+					Ex.p(x) jadi p(a)
+					Ax.(p(x) ^ Ez.q(x,y,z)) jadi Ax.(p(x) ^ q(x,y,f(x,y))) (wtf is this, z nya jadi f(x,y)) (upd: kayaknya dijadiin fungsi yang paramnya tiap variabel di scope itu)
+					intinya ngilangin E
+				Alls out
+					Ax.(p(x) ^ q(x,y,f(x,y))) jadi p(x)^q(x,y,f(x,y))
+					njir ilang
+				Distribution
+					distribusiin and sama or ke kurung
+				Operation/Operators out
+					tiap or dimasukin ke satu kurawal {}, tiap and beda kurawal
+					a^bvc jadi {a}{b,c}
+
+			*example INSEADO*
+			*exercise 123*
+		video 2: Resolution
+			bangsat sejam
+			substitution
+				finite set of variables and terms, replace variables with terms
+				pure substitution: all replacements are free of variables
+				ex: {x<-a, y<-f(b), z<-x} (note ini impure karena z disubs pake x dan x variabel)
+				pure substitution itu idempotent, kalo dilakuin lebih dari sekali hasilnya sama aja
+				impure kaga
+			komposisi substitusi
+				substitusi a komposisi b: ab
+				ex: {x<-a, y<-f(u), z<-v}{u<-d, v<-e, z<-g}={x<-a, y<-f(d), z<-e}{u<-d, v<-e, z<-g}={x<-a, y<-f(d), z<-e, u<-d, v<-e}
+				note z<-g nya ilang, gatau kenapa
+					upd: di kuliah 26 okt, Pak Judhi nyoret z<-g jadi z<-e lol
+				komposisi pure substitution bisa impure
+				komposisi impure substitution bisa pure
+			composability
+				substitusi a dan b composable iff variabel di domain a gak jadi replacement di b
+				composable: {x<-a, y<-b, z<-v}{x<-u, v<-b}
+				tidak composable: {x<-a, y<-b, z<-v}{u<-x, v<-b}
+				theorem: komposisi composable pure substitutions selalu pure
+			pattern matching
+				p(x,y) matches p(a,b)
+				karena ada matchernya
+				p(x,y){x<-a,y<-b}=p(a,b)
+			unification
+				substitusi a unifier ekspresi b dan c iff ba=ca
+				ex. {x<-a,y<-b,z<-b} unifier p(x,y) dan p(x,z)
+				kalo dua ekspresi punya unifier, namanya unifiable
+				note unifier tidak unik
+			most general unifier
+				kalo "isi" unifier lebih (banyak apa dikit ya gatau), dia lebih general (upd: dikit)
+					in other words, kalo unifier a bisa dikomposisi pake subs b jadi unifier c, a lebih general dari c (maybe)
+				substitusi a dikatakan most general unifier of two expressions iff a lebih general dari subs apapun
+				theorem: jika dua ekspresi unifiable, mereka punya most general unifier unik (up to variable permutation)
+			(males nonton, kepikiran mau baca slide aja)
+			(im gonna regret this)
+		
+	Algeo 16.00-17.00
+		dammit lupa ngisi presensi
+		nonton video di https://youtu.be/AnCO1CGR9Sg
+		Ruang Vektor pt.3
+			misalkan A matriks,
+				vektor baris: vektor baris matriks A, satu baris satu vektor
+				vektor kolom: ditto but kolom
+				ruang baris: ruang yang dibangun vektor-vektor baris A, kalo kolomnya ada n ruangnya R^n
+				ruang kolom: ditto but kolom
+				ruang null matriks A: ruang solusi SPL homogen Ax=0, subruang R^n
+			theorem: SPL Ax=b konsisten iff b adalah kombin linier dari vektor-vektor kolom matriks A; in other words, b ada di ruang kolom matriks A
+			basis ruang baris, kolom, dan null
+				misalkan A matris mxn
+				prosedur nyari basis:
+					1. reduksi baris A sampe jadi matriks eselon baris
+					2. basis ruang baris A adalah semua vektor baris yang mengandung leading one
+					3. basis ruang kolom A adalah semua vektor kolom yang mengandung leading one, tapi vektor kolomnya pake yang sebelum reduksi baris
+					4. basis ruang null A adalah vektor parametrik solusi Ax=0
+			rank & nullity
+				rank(A) dimensi ruang baris/ruang kolom A
+				nullity(A) dimensi ruang null A
+				kalo A punya n kolom, rank(A)+nullity(A)=n
+				rank(A) juga bisa diartikan:
+					jumlah baris tidak-0 pada matriks eselon baris hasil reduksi A
+					jumlah variabel utama (non-parameter) pada solusi umum Ax=0
+				nullity(A) juga bisa diartikan:
+					jumlah parameter di solusi umum Ax=0
+			statement ekivalen
+				kalo A matriks nxn, statement di bawah ini ekivalen
+					1. A punya inverse
+					2. Ax=0 cuma punya solusi trivial
+					3. matriks eselon baris tereduksi A itu I
+					4. A hasil perkalian elementary matrices
+					5. Ax=b konsisten/punya tepat satu solusi untuk tiap b matriks nx1
+					6. det(A) bukan 0
+					7. vektor kolom A bebas linier
+					8. vektor baris A bebas linier
+					9. vektor baris/kolom A membangun R^n
+					10. vektor baris/kolom A basis R^n
+					11. A punya rank n
+					12. A punya nullity 0
+
+Selasa 20/10/2020
+	Orkom 13.00-14.00
+		Jumat besok praktikum orkom lagi wow
+		review (?) register-saving conventions
+			kalo di fungsi/prosedur rekursif fungsi/prosedurnya caller sekaligus callee :0
+			*contoh recursive popcount*
+			biasanya sebelum manggil fungsi atau pas manggil fungsi, isi register dimasukin stack dulu biar gak ilang
+		"prinsipnya, selama register bisa dipake untuk nyimpen nilai variabel lokal, register dipake, tapi kalo nggak (mungkin karena kegedean), stack dipake"
+		x86-64 registers
+			twice as big as 32-bit registers
+			prefixnya r, bukan e
+			gambar slide gambar sakti, sangat helpful
+			border stack cuma pake %rsp, gak pake pasangan %esp-%ebp lagi
+			sukanya kalo manggil fungsi gak pake stack frame
+			argumen pertama fungsi %rdi, argumen ke-dua %rsi
+
+	Alstrukdat 14.00-16.00
+		meet 14.00 di teams, mbahas common mistakes uts, agak salty karena dosennya keras kepala
+		nonton 2 video di lms
+		struktur berkait dengan pointer
+			ada 2 jenis, implisit sama eksplisit
+			implisit: list L itu elemen pertama list
+			eksplisit: list L itu manager list
+		struktur berkait dengan array
+			motivasi: daripada alokasi memori satu-satu, mending alokasi banyak langsung dengan cara bikin array
+			pointer ke node diganti indeks node
+			lucu
+			bikin array of pair<elemen,indeks>
+			inisialisasi: bikin list FirstAvail dengan cara ngisi indeks[i]=i+1 for all i (kecuali yang terakhir)
+			terus alokasi-dealokasinya ambil-ngembaliin dari FirstAvail
+
+	Matdis 16.00-18.00
+		link meet kuliah ganti, kaget
+		baca ppt teori bilangan
+		katanya panjang, jadi gaada meet lagi abis pembukaan
+		link: https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2020-2021/Teori-Bilangan-2020-Bagian1.pdf
+			isi:
+			1. teorema euclid: m=qn+r, 0<=r<n
+			2. GCD & Euclid's GCD
+			3. kombinasi linier/diophantine equation: GCD(m,n)=am+bn, a, b integers
+			4. coprime
+			5. modulo (note di definisi kuliah hasil operasi modulo always non-negative)
+			6. kongruen modulo: A kongruen B mod m iff m divides (A-B) (note A B boleh negatif)
+			7. modulo inverse (syarat a punya inverse mod m adalah a dan m koprima dan m>1)
+				cara nyari: cari kombin linier ax+my=1 (mod m), x itu inverse a
+			8. linear congruence: mencari x s.t. ax=b (mod m)
+				cara nyari solusi: kayak aljabar biasa but every division is inverse mult.
+		somehow aku jadi bisa extended Euclid pake tangan yey
+
+Rabu 21/10/2020
+	KWN 07.00-09.00
+		telat bangun, bangun 07.45 :((
+		kuliahnya nonton dua video di teams (aku belum nonton hehe)
+
+	Agama 09.00-11.00
+		materinya etika kepada Allah dan Rasulullah SAW
+		"bahan tayang" udah ada di files teams
+		landasan etika kepada Allah: Ali-Imran 18
+		landasan etika kepada Rasulullah SAW: Al-Ahzab 21
+		selesai 10.20
+
+	Algeo 14.00-16.00
+		nonton video youtube, linknya di WA
+		tentang transformasi linier
+			transformasi=fungsi
+			T: V -> W berarti T transformasi ruang vektor V ke ruang vektor W
+			T transformasi linier iff:
+				T(u+v)=T(u)+T(v)
+				T(ku)=kT(u)
+				consequence: T(0)=0
+			cara ndapetin matriks transformasi standard:
+				1. tentuin bayangan semua vektor basis standard
+				2. susun hasil 1. per kolom
+				jadi
+			transformasi bisa dikomposisi, ntar matriks transformasinya dikaliin
+			AoBoCoD(u)=abcdu, ABCD transformasi, abcd matriks transform standard
+		pdf: https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-17-Ruang-vektor-umum-Bagian4.pdf
+
+	TBFO 16.00-18.00
+		nobar video Bu Harlili di teams lagi
+		parse tree
+			production leftmost CFG dijadiin tree
+			yield parse tree: string yang dihasilin preorder traversal parsetree
+		CFG ambiguous iff ada string hasil yield more than 1 parse tree
+			ex: S-> SS|(S)|()
+			()()()
+			definisi lain: ambiguous iff ada dua leftmost derivative / rightmost derivative yang hasilnya sama
+		buat ngatasin ambiguity, didefine precedence rule dan associative rule
+			ex:
+				I->
+				F->I|(E)
+				T->T|T*F
+				E->
+				(duh miss pokoknya ini kalkulator pake + sama *)
+		ada CFG yang inherently ambiguous, walaupun dikasih precedence sama associative rule tetep ambiguous
+		latihan soal
+		hmm kukira lambda itu epsilon typo, ternyata kayaknya nggak karena muncul berkali-kali?
+		questions:
+			di problem di video, ada soal yang minta cfg ekivalen, apa itu cfg ekivalen?
+
+Kamis 22/10/2020
+	Praktikum Alstrukdat 11.00-13.00
+		fs setengah jam yey
+
+	Matdis 15.00-16.00
+		baca ppt di web Pak Rin
+		sistem kongruen linier/CRT
+			misalkan m1, m2, ..., mn positive integers s.t. all m are pairwise coprime, sistem kongruen x=ai(mod mi) punya solusi unik dalam mod m1*m2*...*mn
+		fundamental theorem of arithmetic
+			semua bilangan bulat >= 2 bisa diekspresikan sebagai perkalian satu atau lebih prima
+		FLT
+
+	Alstrukdat 16.00-18.00
+		nonton video variasi list 1/4 di lms
+		meet kuliah 16.25
+		ngerjain latihan soal yang di lms
+		meet rilis tubes 17.25
+			lol willy wangky
+			spek ada di olympia
+
+Jumat 23/10/2020
+	Orkom 15.00-17.00
+		lanjut kuliah 64-bit
+		interesting features of 64-bit stack frame
+		64-bit procedure summary
+		arrays
+			bikin array -> alokasi memori kontigu untuk banyak variabel
+		note ukuran pointer: di IA32 4 byte, di x86-64 8 byte, no matter tipe data yang ditunjuk pointernya
+		magic:
+			kalo a array of integer, terus ada kode gini
+				int *b = a;
+				b++;
+			b nya jadi a+4, bukan a+1
+			karena ukuran int 4 byte
+		nested array itu row-major, ordering guaranteed
+
+Senin 26/10/2020
+	TBFO 13.00-14.00
+		PDA (push-down automata)
+			otomata yang language-defining nya setara CFG
+			nondeterministic PDA defines all CFL
+			deterministic PDA models parsers
+			mose programming languages have deterministic PDAs
+			intuition: PDA
+				kayak e-NFA tapi bisa manipulate stack
+				its moves determined by:
+					current state of NFA
+					current input symbol
+					current symbol on stack top
+			operasi PDA:
+				pindah state
+				ngepop/push stack
+			PDA formally, isi tuplenya
+				Q: finite set of states
+				sigma: input alphabet
+				L kebalik: stack alphabet
+				delta: fungsi transisi
+				q0: start state, anggota Q
+				Z0: start symbol, anggota L kebalik
+				F: set of final states, subset Q
+			conventions
+				a, b, ... itu input symbol (kadang epsilon juga termasuk)
+				..., X, Y, Z itu stack symbol
+				..., w, x, y, z itu string of input symbols
+				alpha, beta, ... itu string of stack symbols
+			transition function
+				takes three inputs: state, input symbol, stack symbol
+				kalo fungsi delta contains (p,alpha) among its actions, PDA saat itu bisa:
+					pindah state ke p
+					ngilangin a dari depan input
+					(? miss)
+			example PDA: 0^n1^n
+			thoughts:
+				di tiap transisi, stack selalu di-pop, jadi kalo mau nambah simbol harus nambah simbol top sekarang juga, maybe
+					kok di slide kayaknya urutan simbolnya kebalik? simbol baru dulu baru stack top
+					kayaknya emang wajar 
+				stack PDA gapernah habis, paling pol sisa start symbol doang (hm salah, bisa abis, soalnya bisa accept by empty stack)
+
+	Logkom 14.00-16.00
+		Pak Judhi njelasin ulang clausal form sama resolusi
+		ada algo untuk bikin most-general unifier
+
+	Algeo 16.00-17.00
+		nonton video Eigen value & Eigen vector
+		link di WA
+
+Selasa 27/10/2020
+	Orkom 13.00-14.00
+		3 jenis matrix
+			fixed dimensions
+				int fix_ele(int a[16][16], int i, int j){
+					return a[i][j];
+				}
+				fastest, oldest
+			variable dimensions, explicit
+				int ele(int n, int *a, int i, int j){
+					return a[i][j];
+				}
+			variable dimensions, implicit
+				int ele(int n, int a[n][n], int i, int j){
+					return a[i][j];
+				}
+		struct
+			contiguously-allocated region of memory
+			refers to member of struct with names
+			members mau be of different types
+			urutan di memori berdasarkan urutan di pendefinisian struct
+			gimana cara akses member?
+				pointer ke struct nunjuk ke member pertamanya
+				akses member berikutnya pake +offset, kayak array
+		contoh linked list di assembly
+		struct & alignment
+			mesin mbaca program per blok, ex. 64 blok
+			jadi dibuat aturan alignment biar data gak kepotong
+				alamat integer harus kelipatan 4, offsetnya juga
+				alamat double/long harus kelipatan 8, offsetnya juga
+				overall struct length kelipatan 8
+			jadi kalo bikin array of struct terus mau akses elemen, ngitung offsetnya kudu mikir alignment
+		union
+			kayak struct, tapi semua elemen di satu alokasi memori
+			ukuran memori union itu ukuran memori member terbesar union
+			misal isinya char, int[2], sama double, ntar ukuran unionnya 8 byte
+			aplikasi: akses bit pattern float
+				bikin union float-unsigned
+				kalo mau akses bit float pake bit operator, operasiin floatnya
+
+	Alstrukdat 14.00-16.00
+		nonton video di lms sampe 14.30
+		Stack & Queue (& pq) pake List Linier
+			kalo stack pake list yang punya head aja
+			kalo queue pake list yang punya head ama tail
+			kalo pq pake list yang punya head aja gapapa (toh ujung-ujungnya harus searching)
+		
+Senin 02/11/2020
+	TBFO 13.00-14.00
+		meet di teams, gabung 4 kelas
+		materi:
+			Instantaneous Description (ID)
+			goes-to relation
+			language PDA
+				note kalo PDA accept string, remaining input string harus epsilon di akhir, mau acceptnya pake final state/empty stack
+				berarti gabisa accept prefix string
+				zz kayaknya pr ku salah
+			jawaban latihan
+				(q,ie,Z) ke (q,e,ZZ) ke (q,epsilon,Z)
+				(q0,1111,Z0) ke (q0,) (meh idk, soalnya ada di mpc line gartic)
+
+	Logkom 14.00-16.00
+		baca/nonton video prolog di lms
+		kukira gaada meet, jadi tidur :v
+
+	Algeo 16.00-17.00
+		nonton video youtube, link di WA
+		sigh materi wtf lagi
+		Nilai & Vektor Eigen Bagian 2: Diagonalisasi
+			matriks diagonal itu matriks persegi yang elemen selain elemen diagonal utamanya 0
+			matriks persegi mungkin bisa di-diagonalisasi
+				syarat: vektor basis ruang eigen sama banyaknya dengan kolom/baris matriks
+				cara construct
+					misal A matriks persegi yang mau didiagonalisasi, D matriks hasil diagonalisasi, E matriks basis ruang eigen, E' balikan E
+					A = EDE'
+					D = E'AE
+			buat apa diagonalisasi?
+				matrix power mudah
+					A^3 = (EDE')^3 = EDE'EDE'EDE' = ED(E'E)D(E'E)DE' = EDDDE' = ED^3E'
+					karena D matriks diagonal, ngitung pangkatnya tinggal elemen diagonal utamanya dipangkatin, ez
+				pengambilan keputusan pake Analytic Hierarchy Process (AHP)
+					duh banyak rumus
+					intinya dikasih n object sama pairwise comparison "kebagusan" mereka, kasih nilai kebagusan tiap object
+					bisa tau kekonsistenan pairwise comparisonnya juga
+					
+Selasa 03/11/2020
+	Orkom 13.00-14.00
+		Memory layout linux IA32
+			(00) text -> data -> heap -> ... <-stack (FF)
+			text: kodingan, read-only
+			data: data static, variabel global, address (tapi kayaknya gabisa array?)
+			heap: memori dinamis, tumbuh kalo malloc(), calloc(), new()
+			stack: variabel lokal
+
+	Alstrukdat 14.00-16.00
+		baca materi di lms
+		implemen ADT polinom pake array kontigu/list berkait
+
+	Matdis 16.00-18.00
+		belajar kombin
+
+Rabu 04/11/2020
+	KWN 07.00-09.00
+		berhasil ngisi daftar hadir yey
+		meet 07.20
+		presentasi 3 kelompok, mulai kelompok 8
+
+	Agama 09.00-11.00
+		langsung meet
+		materinya etika terhadap macam-macam manusia
+		stressing di etika terhadap manusia lawan jenis
+		keyword(?): munakahad (maybe nikah?)
+		bapaknya urge kita untuk segera nikah
+		nikah ada 3 unsur esensial
+			1. ikatan janji (?)
+			2. 
+		(lol gak nyatet lagi)
+
+	Algeo 14.00-16.00
+		nonton video, link ada di WA
+		materinya quarternion, bilangan kompleks tapi imaginary partnya ada 3
+
+	TBFO 16.00-18.00
+		langsung meet
+		bahas materi pr, sampe konversi PDA acceptance (by final state/empty stack)
+		konversi grammar-PDA and vice versa
+
+Kamis 05/11/2020
+	Praktikum Alstrukdat 11.00-13.00
+		fullscore yey
+		list linier
+
+	Matdis 15.00-16.00
+		kuis
+
+	Alstrukdat 16.00-18.00
+		analisis kasus: alokasi memori
+		memorinya digambarin pake array bool
+		1 isi, 0 kosong
+		terus mau alokasi, dealokasi, dll
+		masih materi list linier sih
+	
+Jumat 06/11/2020
+	Orkom 15.00-17.00
+		langsung meet
+		materinya buffer overflow
+		input pake gets() bisa bocor, nimpa memori stack
+		kalo buffer cukup gede, kita bisa input code exploit ke program, terus bikin code itu dijalanin
+		canary: nilai yang ditaruh di deket (gatau sebelum atau sesudah) buffer untuk deteksi buffer overflow
+			xor %gs: ... di akhir fungsi di assembly itu kayaknya ini, %gs itu register yang nyimpen nilai awal canary
+		gcc ada fitur pengaman buffer overflow, fstack
+		latihan soal
+
+	Kumpul CP pendaftaran Arkav 20.15-?
+		topic
+			1. teknis daftar lomba (?)
+			2. koordinasi lomba-bendahara
+		teknis daftar peserta
+			1. register di web Arkav, confirm akun pake email
+			2. edit profile biar bisa buka tab competitions
+				lol bisa ngecek nomer telpon valid apa gak
+			3. pilih lomba, buat tim
+			4. invite anggota tim, anggota tim juga harus register di arkavidia.id
+			5. mbayar, upload-upload berkas
+		wee bisa minta akun admin web arkav
+			tapi regis dulu di arkavidia.id
+		admin stuff
+			di web admin accept/reject berkas-berkas
+			kalo admin reject berkas, peserta tau, muncul di page status
+			nah habis accept/reject berkas, isi sheet
+				https://docs.google.com/spreadsheets/d/1PN6Pg5_c3GfYsM82Rw_tVglr5m_fCfwa020WOJ9msTs/edit#gid=296609143
+		penutupan pendaftaran 23 Des, harus bayar sebelum itu
+		SOP dari bendahara
+			1. pengecekan rekening dilakukan tiap tanggal genap 19.00
+			2. rekap pembayaran bakal ditulis oleh bendahara ke sheet di atas
+			3. panit bakal konfirmasi pembayaran maks H+3 waktu pembayaran, peserta bisa ngecek status pembayaran di dashboard web arkav
+
+Sabtu 07/11/2020
+	Mentoring Agama 19.30-?
+		materinya adab menuntut ilmu
+		disiplin
+			berasal dari bahasa latin "discipline" yang berarti latihan atau pendidikan kesopanan dan kerohanian serta pengembangan tabiat
+			sikap yang wajib ada pada tiap individu
+			agar bisa disiplin perlu dilakukan berulang-ulang tiap hari
+			"kita bisa karena terbiasa"
+		Syaikh Az-Zarnuji menulis syair Ali bin Abi Thalib:
+			"Ingatlah! engkau tidak akan mendapatkan ilmu kecuali dengan menerapkan enam syarat, kecerdasan, kemauan (bersungguh-sungguh), sabar, biaya, bimbingan guru, waktu yang lama"
+		Ulama mbagi kecerdasan jadi dua: yang dikasih Allah (muhibatun minallah) sama yang didapat dengan usaha (muktasab)
+		(njabarin poin-poin syair Ali)
+		keberkahan ilmu
+			wujud nyata apa yang didapatkan dalam menuntut ilmu dengan baik dan benar
+			pengertian di bawah slide: keberkahan ilmu ialah bertambah atau berkembangnya ilmu yang dipelajari
+
+Senin, 09/11/2020
+	TBFO 13.00-14.00
+		meet gabung 4 kelas di ms teams, yang ngajar Pak Judhi
+		bahas PR
+		Deterministic PDAs
+			regular language itu subset L(DPDA),
+			L(DPDA) itu subset CFL
+			DPDA yang accept by null stack cuma recognize CFL yang punya prefix property
+				language L punya prefix property kalo gaada dua string di L s.t. yang satu prefix yang lain
+
+	Logkom 14.00-16.00
+		bahas praprak & rilis tubes
+
+	Algeo 16.00-17.00
+		kuis 3
+		susah hh
+
+Selasa, 10/11/2020
+	Orkom 13.00-14.00
+		asinkron, latihan soal
+		latihan 7 - structure
+			1a. %eax = l, %ebx = j, %ecx = i, %edx = t, %esi = A[0], %edi = A[l], %esp = , %ebp = 
+			1b.	static int bunny (int l, int r, int *A){
+						int x = A[l];
+						int i = l-1;
+						int j = r;
+						while (i<j){
+							do j--; while (A[j]>x);
+							do i++; while (A[i]<x);
+							if (i<j){
+								int t = A[i];
+								A[i] = A[j];
+								A[j] = t;
+							}
+						}
+						return j;
+					}
+			2. M = 7, N = 5
+			3. H = 7, J = 15
+		latihan 8 - prosedur
+			
+	Alstrukdat 14.00-16.00
+		meet 14.20 di teams, materinya rekursif & list rekursif
+		biasa ae
+
+	Matdis 16.00-18.00
+		belajar graf
+		wao terminologi banyak
+		selesai cepet, jam 5
+
+Rabu 11/11/2020
+	KWN 07.00-09.00
+		telat bangun, gak ngisi presensi :(
+		gaada meet kelas kayaknya, ada video materi di teams sama disuruh ngerjain paper
+
+	Agama 09.00-11.00
+		bangun-presensi-tidur :v
+		dorime
+
+	Algeo 14.00-16.00
+		nonton video bivector, link di WA
+		materi wtf lagi
+
+	TBFO 16.00-18.00
+		langsung meet di ms teams, yang ngajar Pak Judhi
+		properti CFL (review)
+		klosur CFL (lewat doang)
+		pumping lemma CFL (lewat doang, wow)
+		simplifikasi grammar (fokus di sini)
+		gak nyimak lol, ngerjain praprak alstrukdat
+		selesai cepet, jam 5 kurang dah selesai
+
+Kamis 12/11/2020
+	Praktikum Alstrukdat 11.00-13.00
+		fastest praktikum so far, 18 menit kelar
+		jelas fullscore
+
+	Matdis 15.00-16.00
+		gmeet mulai 15.20
+		materi graf bagian 2
+			graf isomorfis
+				dua graf isomorfis iff ada korespondensi satu-satu antara node dan edge kedua graf
+				atau kalau dapat dibuat adjm persis untuk kedua graf
+			graf planar
+				graf yang bisa digambar s.t. gaada edge berpotongan
+				gambar graf tanpa edge berpotongan namanya graf bidang
+			Euler formula
+				hubungan antara #node (n), #edge (e), dan #face (f) untuk graf bidang adalah
+					n-e+f=2
+				note wilayah luar graf juga satu face
+			Euler ineq
+				G graf planar iff	e<=3n-6 atau e<=2n-4, (wth kok ada dua) e>2
+			Teorema Kuratowski (wow)
+				ada 2 graf Kuratowski basic: yang node minimum dan edge minimum
+				graf G planar iff G tidak mengandung subgraf berupa graf Kuratowski
+				dammit nyocokin gambar
+			Dual Graf
+				Dual Graf bidang G (G') dibuat dengan cara:
+					1. tiap face di G itu node G'
+					2. tiap face yang bertetanggaan di G itu edge di G'
+				jangan lupa face luar graf
+
+	Alstrukdat 16.00-18.00
+		mbahas UTS
+		bikin salty
+		jangan lupa CreateEmpty
+
+	

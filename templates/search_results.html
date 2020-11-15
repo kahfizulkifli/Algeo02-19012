@@ -1,1 +1,40 @@
 <!DOCTYPE html>
+
+<!-- judul laman -->
+{% block title %}
+	<h1>My Simple Search Engine</h1>
+{% endblock %}
+
+<!-- isi laman -->
+{% block content %}
+	<!-- form upload dokumen -->
+	<form method="post" enctype="multipart/form-data">
+		<label for="upload">Upload dokumen (.txt):</label>
+		<input type="file" name="upload" accept=".txt" required>
+		<input type="submit">
+	</form>
+	<!-- form query -->
+	<form method="post">
+		<input name="query" placeholder="{{ query }}">
+		<input type="submit">
+	</form>
+	<hr>
+	<!-- menampilkan hasil pencarian -->
+	<ol>
+		{% for filename, filelink, cntword, score, firstSentence in rank %}
+			<li>
+				<a href="{{ filelink }}">{{ filename }}</a><br>
+				Jumlah Kata: {{ cntword }}<br>
+				Tingkat Kemiripan: {{ score }}%<br>
+				{{ firstSentence }}<br>
+			</li>
+			<br>
+		{% endfor %}
+	</ol>
+	<hr>
+	<!-- menampilkan tabel frekuensi kata -->
+	<!-- hyperlink ke laman perihal -->
+   <li>
+   	<a href="{{ perihalpage }}">Perihal</a>
+   </li>
+{% endblock %}
