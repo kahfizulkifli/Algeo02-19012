@@ -14,7 +14,7 @@
 
 ## Setup
 1. clone repo ini
-2. jalankan main.py
+2. jalankan main.py di folder src
 3. buka IP address yang dihasilkan dengan web browser
 
 ## Fitur
