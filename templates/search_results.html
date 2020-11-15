@@ -15,7 +15,7 @@
 	</form>
 	<!-- form query -->
 	<form method="post">
-		<input name="query" value="{{ query }}">
+		<input name="query" value="{{ query }}" required>
 		<input type="submit">
 	</form>
 	<hr>
@@ -51,6 +51,7 @@
 			</tr>
 		{% endfor %}
 	</table>
+	<hr>
 	<!-- hyperlink ke laman perihal -->
    <li>
    	<a href="{{ perihalpage }}">Perihal</a>
