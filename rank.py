@@ -6,7 +6,7 @@ import collections
 # konstanta
 FOLDER = os.path.abspath("docs")
 
-query = {'equip': 2, 'ethic': 1}
+query = {'american': 2, 'president': 3}
 
 def GetRank(query):
 	# GetRank(query) menerima dictionary dengan 
@@ -32,7 +32,7 @@ def GetRank(query):
 	final = dict([((s,i),value) for (i,s),value in new.items()])
 
 	queryvector = []
-	docvector = []
+	docvector = [[] for i in range(banyakDokumen)]
 	simvector = []
 	arroftupleresult = []
 
@@ -42,8 +42,10 @@ def GetRank(query):
 	sim = 0
 	prec = 0
 	magqueryvector = 0
-	iter = 0
+	iterate = 0
 	banyakdokumen = 100
+
+	berlebih = False
 
 	for i in query.values():
 		queryvector.append(i)
@@ -51,31 +53,23 @@ def GetRank(query):
 		magqueryvector += i ** 2
 	magqueryvector = magqueryvector ** 0.5
 
-	iter = len(queryvector)
+	iterate = len(queryvector)
 
-	for s,i in final:
+	for i in range(banyakDokumen):
 		for k in query:
-			if s == k:
-				docvector.append(final[(s,i)])
-				count += 1
-				if count == iter:
-					for j in range(iter):
-						dotproduct += queryvector[j] * docvector[j]
-					count = 0
-		if (i == prec):
-			magdocvector += final[(s,i)] ** 2
-		else:
-			magdocvector = magdocvector ** 0.5
-			sim = dotproduct/(magqueryvector * magdocvector)
-			simvector.append(sim)
-			dotproduct = 0
-			sim = 0
-			docvector.clear()
-			prec += 1
-	magdocvector = magdocvector ** 0.5
-	sim = dotproduct/(magqueryvector * magdocvector)
-	simvector.append(sim)		
-	prec += 1
+			if (k,i) in final:
+				docvector[i].append(final[k,i])
+			else:
+				docvector[i].append(0)
+
+	for i in range(banyakDokumen):
+		for j in range(len(queryvector)):
+			magdocvector += docvector[i][j] ** 2
+			dotproduct += queryvector[j] * docvector[i][j]
+		sim = dotproduct/(magqueryvector * magdocvector)
+		simvector.append(sim)
+		dotproduct = 0
+		sim = 0
 
 	nkata = kataDiDokumen
 	arrfirstsentence = kalimatPertama
@@ -88,7 +82,7 @@ def GetRank(query):
 	return arroftupleresult
 	# print(arroftupleresult)
 
-#GetRank(query, testdata)
+GetRank(query)
 
 	# Misal query = 'big big car'
 
