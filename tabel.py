@@ -3,6 +3,9 @@ from pprint import pprint
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
 
+# konstanta
+FOLDER = os.path.abspath("docs")
+
 
 #Fungsi Utama
 
@@ -10,20 +13,19 @@ def GetTabel(query):
     queryToken = StopWordsRemove(StringToArray(RegexCleaning(query))) #misal query = "The sponge in the woods"; hasil akhir = ["sponge","woods"] ("The" dan "in" hilang karena mereka termasuk stopwords)
     #Ga jadi di pake	#queryStemToken = StemmingKonten(queryToken) #dengan contoh yang sama, maka menghasilkan stemming terhadap kata "sponge" dan "woods"; misal hasilnya jadi ["spong","wood"]
     # print("query di GetTabel:",queryToken)
-    kamusKata = KataDalamKamusNonStem(BANYAK_DOKUMEN)
-    kataDiDokumen = KataDalamDokumenNonStem(BANYAK_DOKUMEN)
-    kamusDokumen = KamusDokumen(BANYAK_DOKUMEN, kamusKata, kataDiDokumen)
-    # pprint(kamusDokumen)
+    kamusKata = KataDalamKamusNonStem()
+    kataDiDokumen = KataDalamDokumenNonStem2()
+    namaFiles = os.listdir(FOLDER)
+    kamusDokumen = KamusDokumen2(namaFiles, kamusKata, kataDiDokumen)
+
     tabelFrekuensiQuery = {}
     for i in range(len(queryToken)):
-        for j in range(BANYAK_DOKUMEN+1): #+1 karena dalam dictionary ini, juga memuat nilai dari kata dalam query.
-            if j == 0: #Kata-kata milik query diwakili oleh indeks j = 0
-                tabelFrekuensiQuery[(queryToken[i],j)] = queryToken.count(queryToken[i])
-            else: #Untuk tiap dokumen, maka j =1 melambangkan dokumen ke 1, j = 2 dokumen ke 2, dst.
-                if (queryToken[i],(j-1)) in kamusDokumen:
-                    tabelFrekuensiQuery[(queryToken[i],j)] = kamusDokumen[(queryToken[i],(j-1))]
-                else:
-                    tabelFrekuensiQuery[(queryToken[i],j)] = 0
+        tabelFrekuensiQuery[(queryToken[i],"query")] = queryToken.count(queryToken[i])
+        for j in namaFiles:
+            if (queryToken[i],j) in kamusDokumen:
+                tabelFrekuensiQuery[(queryToken[i],j)] = kamusDokumen[(queryToken[i],j)]
+            else:
+                tabelFrekuensiQuery[(queryToken[i],j)] = 0
     	    
     return tabelFrekuensiQuery
 			

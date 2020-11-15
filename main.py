@@ -52,6 +52,7 @@ def SearchResultsPage(query):
 	for (filename, cntword, score, firstSentence) in rank:
 		rank2.append((filename, url_for('DisplayPage', filename=filename), cntword, round(score*100,2), firstSentence))
 	return render_template('search_results.html',  terms=queryTermsNonStem, rank=rank2, query=query, tabel=tabel)
+
 # DisplayPage adalah fungsi untuk menampilkan dan mengolah laman tampilan dokumen
 @app.route('/display-<filename>')
 def DisplayPage(filename):

@@ -3,6 +3,9 @@
 from terms import *
 import collections
 
+# konstanta
+FOLDER = os.path.abspath("docs")
+
 query = {'equip': 2, 'ethic': 1}
 
 def GetRank(query):
@@ -18,10 +21,11 @@ def GetRank(query):
 	# semua kata di lower case dan dibuat list kata2 unik secara berurutan
 
 	# dicopas oleh Wibi dari tabel.py
-	kamusKata = KataDalamKamus(BANYAK_DOKUMEN)
-	kataDiDokumen = KataDalamDokumen(BANYAK_DOKUMEN)
-	kalimatPertama = firstsentence(BANYAK_DOKUMEN)
-	kamusDokumen = KamusDokumen(BANYAK_DOKUMEN, kamusKata, kataDiDokumen)
+	kamusKata = KataDalamKamus()
+	kataDiDokumen = KataDalamDokumen()
+	kalimatPertama = firstsentence()
+	banyakDokumen = len(os.listdir(FOLDER))
+	kamusDokumen = KamusDokumen(banyakDokumen, kamusKata, kataDiDokumen)
 
 	newdict = dict([((s,i),value) for (i,s),value in kamusDokumen.items()])
 	new = collections.OrderedDict(sorted(newdict.items()))
@@ -75,9 +79,10 @@ def GetRank(query):
 
 	nkata = kataDiDokumen
 	arrfirstsentence = kalimatPertama
+	namaFiles = os.listdir(FOLDER)
 
 	for i in range(prec):
-		arroftupleresult.append((('hasil'+str(i+1)+'.txt'),len(nkata[i]),simvector[i],arrfirstsentence[i]))
+		arroftupleresult.append((namaFiles[i],len(nkata[i]),simvector[i],arrfirstsentence[i]))
 	
 	arroftupleresult.sort(key=lambda tup: tup[2], reverse = True)
 	return arroftupleresult
