@@ -34,6 +34,7 @@ def GetRank(query):
 	queryvector = []
 	docvector = [[] for i in range(banyakDokumen)]
 	simvector = []
+	arrmagdocvector = []
 	arroftupleresult = []
 
 	count = 0
@@ -62,27 +63,36 @@ def GetRank(query):
 			else:
 				docvector[i].append(0)
 
+	for s,i in final:
+		if i == prec:
+			magdocvector += final[(s,i)] ** 2
+		else:
+			arrmagdocvector.append(magdocvector)
+			magdocvector = 0
+			prec += 1
+	arrmagdocvector.append(magdocvector)
+
 	for i in range(banyakDokumen):
 		for j in range(len(queryvector)):
-			magdocvector += docvector[i][j] ** 2
 			dotproduct += queryvector[j] * docvector[i][j]
-		sim = dotproduct/(magqueryvector * magdocvector)
+		sim = dotproduct/(magqueryvector * arrmagdocvector[i])
 		simvector.append(sim)
 		dotproduct = 0
 		sim = 0
+
 
 	nkata = kataDiDokumen
 	arrfirstsentence = kalimatPertama
 	namaFiles = os.listdir(FOLDER)
 
-	for i in range(prec):
+	for i in range(banyakDokumen):
 		arroftupleresult.append((namaFiles[i],len(nkata[i]),simvector[i],arrfirstsentence[i]))
 	
 	arroftupleresult.sort(key=lambda tup: tup[2], reverse = True)
 	return arroftupleresult
 	# print(arroftupleresult)
 
-GetRank(query)
+#(GetRank(query))
 
 	# Misal query = 'big big car'
 
