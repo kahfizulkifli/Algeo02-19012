@@ -31,7 +31,7 @@ def GetTabel(query):
 			if j == 0: #Kata-kata milik query diwakili oleh indeks j = 0
 				tabelFrekuensiQuery[(queryToken[i],j)] = queryToken.count(queryToken[i])
 			else: #Untuk tiap dokumen, maka j =1 melambangkan dokumen ke 1, j = 2 dokumen ke 2, dst.
-				tabelFrekuensiQuery[(queryToken[i],j)] = kamusDokumen[(queryToken[i],j)]
+				tabelFrekuensiQuery[(queryToken[i],j)] = kamusDokumen[(queryToken[i],(j-1))]
 					    
 	return tabelFrekuensiQuery
 			
