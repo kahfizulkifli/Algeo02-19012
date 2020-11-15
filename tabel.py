@@ -8,12 +8,34 @@ from nltk.stem import PorterStemmer
 # boleh nambah import atau variabel global
 # dokumen-dokumen ada di directory "docs/"
 
+#Konstanta
+BANYAK_DOKUMEN = 2 #ubah ini sesuai kebutuhan
+
+
 #Fungsi Utama
-def GetTabel(banyakDokumen, kamusKata, kataDiDokumen):
-	return KamusDokumen(banyakDokumen, kamusKata, kataDiDokumen)
+#def GetTabel(banyakDokumen, kamusKata, kataDiDokumen):              g jadi dipake
+	#return KamusDokumen(banyakDokumen, kamusKata, kataDiDokumen)
 
 
-
+def GetTabel(query):
+	queryToken = StopWordsRemove(StringToArray(RegexCleaning(query))) #misal query = "The sponge in the woods"; hasil akhir = ["sponge","woods"] ("The" dan "in" hilang karena mereka termasuk stopwords)
+	queryStemToken = StemmingKonten(queryToken) #dengan contoh yang sama, maka menghasilkan stemming terhadap kata "sponge" dan "woods"; misal hasilnya jadi ["spong","wood"]
+	
+	kamusKata = KataDalamKamus(BANYAK_DOKUMEN)
+	kataDiDokumen = KataDalamDokumen(BANYAK_DOKUMEN)
+	kamusDokumen = KamusDokumen(BANYAK_DOKUMEN, kamusKata, kataDiDokumen)
+	
+	tabelFrekuensiQuery = {}
+	for i in range(len(queryToken)):
+		for j in range(BANYAK_DOKUMEN):
+			tabelFrekuensiQuery[(queryToken[i],j)] = kamusDokumen[(queryStemToken[i],j)]
+					    
+	return tabelFrekuensiQuery
+			
+			
+		
+	
+	
 #Fungsi Tambahan
 
 #-------Dummy--------------
@@ -148,7 +170,7 @@ for url in arrurl:
   SaveKontenTxt("hasil"+str(i+1),WebScrappingKontenByUrl(url))
   i += 1
 
-kamusKata = KataDalamKamus(2)
-kataDiDokumen = KataDalamDokumen(2)
-kalimatPertama = firstsentence(2)
-kamusDokumen = KamusDokumen(2, kamusKata, kataDiDokumen)
+kamusKata = KataDalamKamus(BANYAK_DOKUMEN)
+kataDiDokumen = KataDalamDokumen(BANYAK_DOKUMEN)
+kalimatPertama = firstsentence(BANYAK_DOKUMEN)
+kamusDokumen = KamusDokumen(BANYAK_DOKUMEN, kamusKata, kataDiDokumen)
