@@ -1,6 +1,7 @@
 import io 
 import re
 import string
+import os
 from newspaper import Article
 from nltk.corpus import stopwords 
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -8,7 +9,8 @@ from nltk.stem import PorterStemmer
 from pprint import pprint
 
 #Konstanta
-BANYAK_DOKUMEN = 2 #ubah ini sesuai kebutuhan
+FILE_TXT = os.listdir("../test") #Membaca seluruh nama file dalam folder test dan menyimpannya dalam bentuk array
+BANYAK_DOKUMEN = len(FILE_TXT) S
 
 #Fungsi untuk melakukan ekstraksi konten web (Web Scrapping) berupa berita yang ada di laman web
 def WebScrappingKontenByUrl(url): #Parameter yang dimasukan adalah string yang merujuk ke alamat laman berita
@@ -76,10 +78,10 @@ def StopWordsRemove(arrayOfKata):
     return arrayKataTanpaStopWords
 
 #Mengambil kalimat pertama
-def firstsentence(banyakDokumen):
+def firstsentence(dokumenDalamFolder):
   arroffirstsentence = []
-  for i in range(banyakDokumen):
-    konten = BacaKontenTxt("hasil"+str(i+1))
+  for namaFile in dokumenDalamFolder:
+    konten = BacaKontenTxt(namaFile)
     sentences = sent_tokenize(konten)
     arroffirstsentence.append(sentences[0])
   return arroffirstsentence
@@ -96,37 +98,41 @@ def ArrayIsiFileSiapOlahNonStem(namaFile):
 	return arrayBersih
 
 #Fungsi yang mengembalikan kamus kata dalam bentuk array. Kamus kata adalah daftar kata unik dari dokumen yang dimasukkan
-def KataDalamKamus(banyakDokumen): #Parameter berupa banyaknya dokumen yang ingin dibaca
+def KataDalamKamus(dokumenDalamFolder): #Parameter berupa banyaknya dokumen yang ingin dibaca
     kamus = [] #Array kosong untuk menyimpan kata unik
-    for i in range(banyakDokumen): 
-        arrTemp = ArrayIsiFileSiapOlah("hasil"+str(i+1)) #Memanggil fungsi ArrayIsiFileSiapOlah untuk mendapakan kata bersih dari masing-masing dokumen
+    for namaFile in dokumenDalamFolder: 
+        arrTemp = ArrayIsiFileSiapOlah(namaFile) #Memanggil fungsi ArrayIsiFileSiapOlah untuk mendapakan kata bersih dari masing-masing dokumen
         kamus += arrTemp #Menggabungkan kata-kata tiap dokumen
         kamus = list(set(kamus)) #Memanggil set agar elemen menjadi unik (tidak duplikat), kemudian memanggil list agar berubah menjadi array kembali
         kamus.sort() #Mengurutkan dari a-z, elemen  dalam kamus
     return kamus
 
-def KataDalamKamusNonStem(banyakDokumen): #Parameter berupa banyaknya dokumen yang ingin dibaca
+def KataDalamKamusNonStem(dokumenDalamFolder): #Parameter berupa banyaknya dokumen yang ingin dibaca
     kamus = [] #Array kosong untuk menyimpan kata unik
-    for i in range(banyakDokumen): 
-        arrTemp = ArrayIsiFileSiapOlahNonStem("hasil"+str(i+1)) #Memanggil fungsi ArrayIsiFileSiapOlah untuk mendapakan kata bersih dari masing-masing dokumen
+    for namaFile in dokumenDalamFolder: 
+        arrTemp = ArrayIsiFileSiapOlahNonStem(namaFile) #Memanggil fungsi ArrayIsiFileSiapOlah untuk mendapakan kata bersih dari masing-masing dokumen
         kamus += arrTemp #Menggabungkan kata-kata tiap dokumen
         kamus = list(set(kamus)) #Memanggil set agar elemen menjadi unik (tidak duplikat), kemudian memanggil list agar berubah menjadi array kembali
         kamus.sort() #Mengurutkan dari a-z, elemen  dalam kamus
     return kamus
 
 #Fungsi yang mengembalikan array yang berisi kata-kata yang muncul pada setiap dokumen (tidak unik)
-def KataDalamDokumen(banyakDokumen):
-    kataDiDokumen = [[] for i in range(banyakDokumen)] #Inisiasi array of array yang berisi elemen sebanyak dokumen yang ingin dibaca
-    for i in range(banyakDokumen):
-        arrTemp = ArrayIsiFileSiapOlah("hasil"+str(i+1)) #menyiapkan kata-kata dalam dokumen 
+def KataDalamDokumen(dokumenDalamFolder):
+    kataDiDokumen = [[] for i in range(len(dokumenDalamFolder))] #Inisiasi array of array yang berisi elemen sebanyak dokumen yang ingin dibaca
+    i = 0
+    for namaFile in dokumenDalamFolder:
+        arrTemp = ArrayIsiFileSiapOlah(namaFile) #menyiapkan kata-kata dalam dokumen 
         kataDiDokumen[i] = arrTemp #Menyimpan kata-kata dalam dokumen ke dalam variabel kataDiDokumen
+	i += 1
     return kataDiDokumen
 
-def KataDalamDokumenNonStem(banyakDokumen):
-    kataDiDokumen = [[] for i in range(banyakDokumen)] #Inisiasi array of array yang berisi elemen sebanyak dokumen yang ingin dibaca
-    for i in range(banyakDokumen):
-        arrTemp = ArrayIsiFileSiapOlahNonStem("hasil"+str(i+1)) #menyiapkan kata-kata dalam dokumen 
+def KataDalamDokumenNonStem(dokumenDalamFolder):
+    kataDiDokumen = [[] for i in range(len(dokumenDalamFolder))] #Inisiasi array of array yang berisi elemen sebanyak dokumen yang ingin dibaca
+    i = 0
+    for namaFile in range(dokumenDalamFolder):
+        arrTemp = ArrayIsiFileSiapOlahNonStem(namaFile) #menyiapkan kata-kata dalam dokumen 
         kataDiDokumen[i] = arrTemp #Menyimpan kata-kata dalam dokumen ke dalam variabel kataDiDokumen
+	i += 1
     return kataDiDokumen
 
 #Fungsi yang mengembalikan dictionary yang memiliki format {(Kata,No.Dokumen): FrekuensiKata}
