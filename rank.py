@@ -67,6 +67,7 @@ def GetRank(query):
 		if i == prec:
 			magdocvector += final[(s,i)] ** 2
 		else:
+			magdocvector ** 0.5
 			arrmagdocvector.append(magdocvector)
 			magdocvector = 0
 			prec += 1
