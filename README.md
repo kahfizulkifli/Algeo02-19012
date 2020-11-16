@@ -19,4 +19,5 @@
 
 ## Fitur
 * Pencarian terhadap dokumen-dokumen yang ada dalam folder test
-* Upload dokumen untuk menambahkan dokumen yang dapat dicari
+* Penambahan dokumen melalui upload file
+* Penambahan dokumen melalui web scraping
