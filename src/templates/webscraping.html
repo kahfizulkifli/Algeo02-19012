@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<!-- judul laman --> 
+{% block title %}
+	<h1>Web Scraping</h1>
+	<h2>Mengambil dokumen dari URL</h2>
+{% endblock %}
+
+<!-- isi laman -->
+{% block content %}
+	<!-- form URL -->
+	<form method="post">
+		<input name="query" placeholder="Masukkan URL" required>
+		<input name="namafile" placeholder="Masukkan nama file (dengan .txt)" required>
+		<input type="submit">
+	</form>
+	<hr>
+   <br>
+   <!-- hyperlink ke laman utama -->
+   <li>
+   	<a href="{{ homepage }}">Kembali</a>
+   </li>
+{% endblock %}
