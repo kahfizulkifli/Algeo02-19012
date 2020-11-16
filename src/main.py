@@ -71,7 +71,7 @@ def WebScrapingPage():
 		url = request.form['query'] # ambil url
 		namafile = request.form['namafile']
 		text = WebScrappingKontenByUrl(url) # dapatkan string dokumen
-		file = open(os.path.join(app.config['UPLOAD_FOLDER'],namafile),'w')
+		file = open(os.path.join(app.config['UPLOAD_FOLDER'],FormatNamaFile(namafile)),'w')
 		file.write(text)
 		file.close()
 		return redirect(url_for('HomePage'))
