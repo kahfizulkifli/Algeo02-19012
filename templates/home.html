@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- judul laaman --> 
+<!-- judul laman --> 
 {% block title %}
 	<h1>My Simple Search Engine</h1>
 {% endblock %}
@@ -15,6 +15,7 @@
 	</form>
 	<!-- form query -->
 	<form method="post">
+		<label for="query">Query:</label>
 		<input name="query" placeholder="Masukkan query" required>
 		<input type="submit">
 	</form>
@@ -23,5 +24,8 @@
    <!-- hyperlink ke laman perihal -->
    <li>
    	<a href="{{ perihalpage }}">Perihal</a>
+   </li>
+   <li>
+   	<a href="{{ scrapingpage }}">Web Scraping</a>
    </li>
 {% endblock %}

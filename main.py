@@ -26,7 +26,7 @@ def HomePage():
 			filename = secure_filename(file.filename) # buat nama file tahan serangan
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename)) # simpan file yang diunggah pengguna
 			return render_template('home.html', perihalpage=url_for('PerihalPage')) # muat laman utama (home)
-	return render_template('home.html', perihalpage=url_for('PerihalPage')) # muat laman utama (home)
+	return render_template('home.html', perihalpage=url_for('PerihalPage'), scrapingpage=url_for('WebScrapingPage')) # muat laman utama (home)
 
 # SearchResultsPage adalah fungsi untuk menampilkan dan mengolah laman hasil pencarian
 @app.route('/search-<query>', methods=['GET', 'POST'])
@@ -39,7 +39,7 @@ def SearchResultsPage(query):
 			file = request.files['upload'] # ambil file pengguna
 			filename = secure_filename(file.filename) # buat nama file tahan serangan
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename)) # simpan file yang diunggah pengguna
-			return render_template('home.html', perihalpage=url_for('PerihalPage')) # muat laman utama (home)
+		return render_template('home.html', perihalpage=url_for('PerihalPage'), scrapingpage=url_for('WebScrapingPage')) # muat laman utama (home)
 	
 	# convert string query ke list of terms
 	queryTermsStem = GetTermsStem(query)
@@ -51,7 +51,7 @@ def SearchResultsPage(query):
 	rank2 = []
 	for (filename, cntword, score, firstSentence) in rank:
 		rank2.append((filename, url_for('DisplayPage', filename=filename), cntword, round(score*100,2), firstSentence))
-	return render_template('search_results.html',  terms=queryTermsNonStem, rank=rank2, query=query, tabel=tabel)
+	return render_template('search_results.html',  terms=queryTermsNonStem, rank=rank2, query=query, tabel=tabel, perihalpage=url_for('PerihalPage'), scrapingpage=url_for('WebScrapingPage'))
 
 # DisplayPage adalah fungsi untuk menampilkan dan mengolah laman tampilan dokumen
 @app.route('/display-<filename>')
@@ -59,10 +59,22 @@ def DisplayPage(filename):
 	file = open(os.path.join(app.config['UPLOAD_FOLDER'], filename)) # buka file yang diminta pengguna
 	return render_template('display.html', text=file.read()) # muat laman tampilan dokumen
 
-# PerihalPage adalah fungsi untuk menampilkan dan mengolah laman home
+# PerihalPage adalah fungsi untuk menampilkan dan mengolah laman perihal
 @app.route('/perihal')
 def PerihalPage():
 	return render_template('perihal.html', homepage=url_for('HomePage')) # muat laman perihal
 
+# WebScrapingPage adalah fungsi untuk menampilkan dan mengolah laman web scraping
+@app.route('/webscraping', methods=['GET', 'POST'])
+def WebScrapingPage():
+	if request.method == 'POST': # website mendapat masukan
+		url = request.form['query'] # ambil url
+		namafile = request.form['namafile']
+		text = WebScrappingKontenByUrl(url) # dapatkan string dokumen
+		file = open(os.path.join(app.config['UPLOAD_FOLDER'],namafile),'w')
+		file.write(text)
+		file.close()
+		return redirect(url_for('HomePage'))
+	return render_template('webscraping.html', homepage=url_for('HomePage'))
 if __name__ == '__main__':
   app.run()

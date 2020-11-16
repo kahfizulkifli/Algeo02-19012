@@ -2,11 +2,41 @@
 
 <!-- judul laman -->
 {% block title %}
-	<h1>Ini halaman perihal</h1>
+	<h1>Perihal</h1>
 {% endblock %}
 
 <!-- isi laman perihal -->
 {% block content %}
+	<h1>Konsep singkat query</h1>
+	<pr>
+		Ketika search engine menerima query, search engine akan membersihkan string query dan mengubahnya menjadi array of terms. Selain itu, search engine juga akan membersihkan tiap dokumen yang ada di folder test. Lalu, untuk setiap dokumen di folder test, search engine akan menghitung tingkat kemiripannya dengan query dengan menggunakan konsep cosine similarity. Setelah itu, informasi tentang masing-masing dokumen diurutkan berdasarkan tingkat kemiripan dan ditampilkan pada laman web. 
+	</pr>
+	<hr>
+	<h1>How to use</h1>
+	<h2>Mengunggah dokumen</h2>
+	<ol>
+		<li>Klik tombol "Choose File" pada bagian atas laman web.</li>
+		<li>Pilih dokumen yang hendak diunggah, dokumen harus merupakan file .txt.</li>
+		<li>Klik tombol "Submit".</li>
+	</ol>
+	<h2>Mencari dokumen</h2>
+	<ol>
+		<li>Masukkan query pada text box pada bagian atas laman web.</li>
+		<li>Klik tombol "Submit".</li>
+	</ol>
+	<h2>Membuka dokumen</h2>
+	<pr>Klik judul dokumen.</pr>
+	<hr>
+	<h1>About us</h1>
+	<pr>
+		Search engine ini dibuat oleh tiga mahasiswa Teknik Informatika ITB angkatan 2019:
+		<li><a href="https://github.com/kahfizulkifli">Kahfi Soobhan Zulkifli</a>, 13519060</li>
+		<li><a href="https://github.com/akramab">Muhammad Akram Al Bari</a>, 13519142</li>
+		<li><a href="https://github.com/Jauhar-Wibisono">Jauhar Wibisono</a>, 13519160</li>
+		<a href="https://github.com/kahfizulkifli/Algeo02-19012">Repo Github search engine</a>
+	</pr>
+	<hr>
+	<!-- hyperlink ke laman utama -->
 	<li>
 		<a href="{{ homepage }}">kembali</a>
 	</li>
