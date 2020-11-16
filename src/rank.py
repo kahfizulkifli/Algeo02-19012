@@ -4,7 +4,7 @@ from terms import *
 import collections
 
 # konstanta
-FOLDER = os.path.abspath("docs")
+FOLDER = os.path.abspath("../test")
 
 query = {'american': 2, 'president': 3}
 

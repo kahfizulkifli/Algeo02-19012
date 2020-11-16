@@ -9,7 +9,7 @@ from nltk.stem import PorterStemmer
 from pprint import pprint
 
 #konstanta
-FOLDER = os.path.abspath("docs")
+FOLDER = os.path.abspath("../test")
 
 #Fungsi untuk melakukan ekstraksi konten web (Web Scrapping) berupa berita yang ada di laman web
 def WebScrappingKontenByUrl(url): #Parameter yang dimasukan adalah string yang merujuk ke alamat laman berita

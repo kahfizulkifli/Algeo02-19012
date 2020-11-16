@@ -7,7 +7,7 @@ from terms import *
 from tabel import *	
 
 app = Flask(__name__)
-UPLOAD_FOLDER = os.path.abspath('docs') # directory dokumen-dokumen
+UPLOAD_FOLDER = os.path.abspath('../test') # directory dokumen-dokumen
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # BukanTxt(filename) mengembalikan true apabila filename bukan merupakan nama file .txt
