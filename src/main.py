@@ -62,7 +62,7 @@ def DisplayPage(filename):
 # PerihalPage adalah fungsi untuk menampilkan dan mengolah laman perihal
 @app.route('/perihal')
 def PerihalPage():
-	return render_template('perihal.html', homepage=url_for('HomePage')) # muat laman perihal
+	return render_template('perihal.html', homepage=url_for('HomePage'), scrapingpage=url_for('WebScrapingPage')) # muat laman perihal
 
 # WebScrapingPage adalah fungsi untuk menampilkan dan mengolah laman web scraping
 @app.route('/webscraping', methods=['GET', 'POST'])
