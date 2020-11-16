@@ -4,7 +4,7 @@ from pprint import pprint
 # dokumen-dokumen ada di directory "docs/"
 
 # konstanta
-FOLDER = os.path.abspath("docs")
+FOLDER = os.path.abspath("../test")
 
 
 #Fungsi Utama
